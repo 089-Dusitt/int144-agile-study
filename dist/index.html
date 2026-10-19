@@ -42,8 +42,10 @@
     </main>
     <div class="glossary-slot" id="glossary-slot">
       <aside class="glossary" id="glossary" aria-labelledby="glossary-title">
+        <div id="glossary-resizer" class="glossary-resizer" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="glossary" aria-label="ปรับความกว้างช่องคำศัพท์ ใช้ลูกศรซ้ายเพื่อขยาย ลูกศรขวาเพื่อย่อ" aria-valuemin="260" aria-valuemax="720" aria-valuenow="390" hidden><span aria-hidden="true">⋮</span></div>
         <div class="glossary-header"><div><span class="eyebrow">YOUR SIDE DICTIONARY</span><h2 id="glossary-title">คำศัพท์ข้างบทเรียน <span>Aa</span></h2></div><button class="icon-button dialog-close" data-close="glossary-dialog" aria-label="ปิดคำศัพท์">×</button></div>
-        <p class="glossary-hint">เจอคำที่ไม่คุ้น? กดคำเส้นประในบทได้เลย</p>
+        <p class="glossary-hint">กดคำเส้นประเพื่อดูความหมาย · ลากขอบซ้าย ↔ ปรับช่อง</p>
+        <div class="glossary-sizing"><span>ความกว้าง <output id="glossary-width-label">390 px</output></span><div><button id="glossary-narrower" type="button" aria-label="ย่อช่องคำศัพท์" title="ย่อช่องคำศัพท์">−</button><button id="glossary-reset" type="button" aria-label="คืนขนาดช่องคำศัพท์เริ่มต้น" title="คืนขนาดเริ่มต้น">↺</button><button id="glossary-wider" type="button" aria-label="ขยายช่องคำศัพท์" title="ขยายช่องคำศัพท์">+</button></div></div>
         <label class="search-field" for="term-search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="term-search" type="search" placeholder="เช่น Sprint, DoD, คุณค่า…" autocomplete="off"><span class="visually-hidden">ค้นหาคำศัพท์</span></label>
         <div class="term-filters"><button class="chip active" id="related-terms" aria-pressed="true">คำในบทนี้</button><button class="chip" id="all-terms" aria-pressed="false">ทั้งหมด</button><span id="term-count"></span></div>
         <section id="term-detail" class="term-detail" aria-label="ความหมายคำที่เลือก"></section>

@@ -13,7 +13,9 @@
     completed: new Set(Array.isArray(saved.completed) ? saved.completed.filter(id => byChapter.has(id)) : []),
     positions: saved.positions && typeof saved.positions === 'object' ? saved.positions : {},
     font: Math.min(22, Math.max(14, Number(saved.font) || 16)),
-    theme: saved.theme === 'dark' ? 'dark' : 'light'
+    theme: saved.theme === 'dark' ? 'dark' : 'light',
+    glossaryWidth: Number.isFinite(saved.glossaryWidth) ? saved.glossaryWidth : 390,
+    mobileGlossaryWidth: Number.isFinite(saved.mobileGlossaryWidth) ? saved.mobileGlossaryWidth : 380
   };
   let toastTimer, announceTimer, scrollTimer, mounted=false;
   const escapeHTML = x => String(x ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -34,7 +36,7 @@
     return result + escapeHTML(input.slice(start));
   }
   function persist() {
-    try { localStorage.setItem(storageKey, JSON.stringify({last:state.current, completed:[...state.completed], positions:state.positions, font:state.font, theme:state.theme})); } catch { /* Reading works without localStorage. */ }
+    try { localStorage.setItem(storageKey, JSON.stringify({last:state.current, completed:[...state.completed], positions:state.positions, font:state.font, theme:state.theme, glossaryWidth:state.glossaryWidth, mobileGlossaryWidth:state.mobileGlossaryWidth})); } catch { /* Reading works without localStorage. */ }
   }
   function announce(message) { clearTimeout(announceTimer); announceTimer=setTimeout(()=>{$('#announcer').textContent=message;},250); }
   function toast(message) { clearTimeout(toastTimer); $('#toast').textContent=message; $('#toast').classList.add('show'); toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2200); }
@@ -132,6 +134,70 @@
     $('#font-smaller').disabled=state.font<=14;
     $('#font-larger').disabled=state.font>=22;
   }
+  // The panel and reader have independent scroll areas; resizing never rewrites the article.
+  function panelBounds() {
+    const mobile=innerWidth<=720;
+    const nav=innerWidth>=1191?$('#nav-slot').getBoundingClientRect().width:0;
+    const max=mobile?Math.max(180,innerWidth-16):Math.min(720,Math.max(260,innerWidth-nav-340));
+    return {mobile,min:Math.min(260,max),max:Math.floor(max)};
+  }
+  function applyPanelWidth(value=null,save=false) {
+    const b=panelBounds(),key=b.mobile?'mobileGlossaryWidth':'glossaryWidth';
+    const width=Math.round(Math.max(b.min,Math.min(b.max,value??state[key])));
+    document.documentElement.style.setProperty(b.mobile?'--mobile-glossary-width':'--glossary-width',`${width}px`);
+    if(value!==null) state[key]=width;
+    const grip=$('#glossary-resizer');
+    grip.setAttribute('aria-valuemin',String(b.min));
+    grip.setAttribute('aria-valuemax',String(b.max));
+    grip.setAttribute('aria-valuenow',String(width));
+    grip.setAttribute('aria-valuetext',`${width} พิกเซล`);
+    $('#glossary-width-label').textContent=`${width} px`;
+    $('#glossary-narrower').disabled=width<=b.min;
+    $('#glossary-wider').disabled=width>=b.max;
+    if(save) persist();
+    return width;
+  }
+  const grip=$('#glossary-resizer');
+  let panelDrag=null;
+  function finishPanelDrag() {
+    if(!panelDrag) return;
+    const id=panelDrag.id;
+    panelDrag=null;
+    document.body.classList.remove('resizing-glossary');
+    grip.classList.remove('dragging');
+    if(grip.hasPointerCapture(id)) grip.releasePointerCapture(id);
+    persist();
+    announce(`ช่องคำศัพท์กว้าง ${grip.getAttribute('aria-valuenow')} พิกเซล`);
+  }
+  grip.hidden=false;
+  grip.addEventListener('pointerdown',e=>{
+    if(e.button!==0||!e.isPrimary) return;
+    e.preventDefault();
+    grip.focus({preventScroll:true});
+    panelDrag={id:e.pointerId,x:e.clientX,width:applyPanelWidth()};
+    grip.setPointerCapture(e.pointerId);
+    grip.classList.add('dragging');
+    document.body.classList.add('resizing-glossary');
+  });
+  grip.addEventListener('pointermove',e=>{
+    if(panelDrag?.id!==e.pointerId) return;
+    applyPanelWidth(panelDrag.width+panelDrag.x-e.clientX);
+  });
+  for(const event of ['pointerup','pointercancel','lostpointercapture']) grip.addEventListener(event,finishPanelDrag);
+  grip.addEventListener('keydown',e=>{
+    const b=panelBounds(),current=applyPanelWidth(),step=e.shiftKey?48:16;
+    const value={ArrowLeft:current+step,ArrowRight:current-step,Home:b.min,End:b.max}[e.key];
+    if(value===undefined) return;
+    e.preventDefault();applyPanelWidth(value,true);
+  });
+  const resetPanel=()=>applyPanelWidth(panelBounds().mobile?380:390,true);
+  grip.addEventListener('dblclick',resetPanel);
+  $('#glossary-narrower').addEventListener('click',()=>applyPanelWidth(applyPanelWidth()-40,true));
+  $('#glossary-wider').addEventListener('click',()=>applyPanelWidth(applyPanelWidth()+40,true));
+  $('#glossary-reset').addEventListener('click',resetPanel);
+  window.addEventListener('resize',()=>{finishPanelDrag();applyPanelWidth();});
+  window.addEventListener('blur',finishPanelDrag);
+  applyPanelWidth();
   const plainText=x=>String(x||'').replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g,'$2').replace(/\[\[([^\]]+)\]\]/g,(_,id)=>byTerm.get(id)?.en||id).replace(/\*\*|`/g,'');
   const chapterSearch=chapters.map(c=>({id:c.id,title:c.title,subtitle:c.subtitle,text:plainText(`${c.title} ${c.subtitle} ${JSON.stringify(c.blocks)}`).toLocaleLowerCase()}));
   function renderSearch() {
