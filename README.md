@@ -2,7 +2,7 @@
 
 ห้องอ่านสอบ Agile Software Development I รวมสรุปภาษาไทยครบ 5 บท คำอธิบายจาก transcript และคำศัพท์ 123 คำ
 
-เปิดเว็บ: https://089-dusitt.github.io/int144-agile-study/
+โค้ดถูกเก็บไว้ใน repository ส่วนตัว ยังไม่ได้เปิดเผยแพร่เว็บไซต์สู่สาธารณะ
 
 ## ใช้งาน
 
@@ -17,4 +17,4 @@
 
 ## แก้ไขและเผยแพร่
 
-เว็บเป็น HTML/CSS/JavaScript แบบ static ไม่ต้องติดตั้ง dependencies เนื้อหาอยู่ใน `dist/data.js` ตรวจด้วย `node check-site.mjs` และ push ไป `main` เพื่อเผยแพร่ผ่าน GitHub Pages อัตโนมัติ
+เว็บเป็น HTML/CSS/JavaScript แบบ static ไม่ต้องติดตั้ง dependencies เนื้อหาอยู่ใน `dist/data.js` ตรวจด้วย `node check-site.mjs` มี workflow สำหรับ GitHub Pages เตรียมไว้แบบสั่งรันเอง โดยยังไม่ได้เปิด Pages หรือเริ่มเผยแพร่
