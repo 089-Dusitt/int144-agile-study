@@ -1,6 +1,6 @@
 # INT144 Agile Study Room
 
-ห้องอ่านสอบ Agile Software Development I รวมสรุปภาษาไทยครบ 5 บท คำอธิบายจาก transcript และคำศัพท์ 123 คำ
+ห้องอ่านสอบ Agile Software Development I รวมสรุปภาษาไทยครบ 5 บท คำอธิบายจาก transcript และคำศัพท์ 127 คำ
 
 เปิดเว็บ: https://089-dusitt.github.io/int144-agile-study/
 

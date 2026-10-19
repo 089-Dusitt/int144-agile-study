@@ -11,7 +11,7 @@ const {chapters,terms,sources}=sandbox.window.STUDY;
 const termIds=new Set(terms.map(t=>t.id));
 const chapterIds=new Set(chapters.map(c=>c.id));
 const sourceIds=new Set(sources.map(s=>s.id));
-assert.equal(terms.length,123);
+assert.equal(terms.length,127);
 assert.equal(chapters.length,12);
 assert.equal(sources.length,16);
 assert.equal(termIds.size,terms.length);

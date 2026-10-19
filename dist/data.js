@@ -221,11 +221,12 @@ window.STUDY = {
       "en": "Just-in-time / JIT",
       "th": "ทำเมื่อใกล้จำเป็น",
       "definition": "เก็บรายละเอียดหรือสร้างสิ่งที่ต้องใช้เมื่อใกล้เวลาจำเป็น เพื่อลดงานเสียเปล่า",
-      "example": "",
+      "example": "ลงรายละเอียด PBI ที่ใกล้จะทำใน Sprint ถัดไป แทนการแตกทุกงานของทั้งโครงการตั้งแต่ต้น",
       "tip": "ยังต้องมีภาพรวม ไม่ใช่ไม่วางแผน",
       "related": [
         "stepwise",
-        "detailed"
+        "detailed",
+        "upfront"
       ],
       "category": "Agile และ Scrum"
     },
@@ -307,13 +308,14 @@ window.STUDY = {
       "id": "empirical",
       "en": "Empirical Process Control",
       "th": "ควบคุมจากประสบการณ์จริง",
-      "definition": "ใช้ประสบการณ์ การสังเกต และการทดลอง ตัดสินใจจากสิ่งที่รู้จริง",
+      "definition": "กระบวนการเชิงประจักษ์ ใช้ประสบการณ์ การสังเกต และการทดลอง ตัดสินใจจากสิ่งที่รู้จริง เหมาะกับงานที่ไม่แน่นอน จึงต้องทำให้โปร่งใส ตรวจผล และปรับตัวอย่างต่อเนื่อง",
       "example": "ทำ ทดลองใช้ ตรวจสิ่งที่เกิดขึ้น แล้วปรับ",
       "tip": "อาจารย์ G2 ระบุว่าออกสอบเสมอ",
       "related": [
         "transparency",
         "inspection",
-        "adaptation"
+        "adaptation",
+        "defined-process"
       ],
       "category": "Agile และ Scrum"
     },
@@ -1676,6 +1678,64 @@ window.STUDY = {
         "trust"
       ],
       "category": "ค่านิยมและทีม"
+    },
+    {
+      "id": "planning-phase",
+      "en": "Planning (Pre-game)",
+      "th": "วางแผนเตรียมก่อนเริ่มพัฒนา",
+      "definition": "ช่วงเตรียมงานตามกรอบ Phases ในสไลด์วิชานี้ กำหนดภาพรวมผลิตภัณฑ์ Backlog ทีม เวลา ต้นทุน ความเสี่ยง และสถาปัตยกรรมระดับสูง ก่อนเข้าสู่ Development Sprints",
+      "example": "ทีมตกลงว่าจะสร้างระบบอะไร จัดทีมและ Backlog ตั้งต้น แล้วประเมินเวลาและความเสี่ยง",
+      "tip": "Planning ตรงนี้คือช่วงเตรียมโครงการ ส่วน Sprint Planning คือการวางแผนงานในแต่ละ Sprint",
+      "related": [
+        "closure",
+        "defined-process",
+        "planning",
+        "upfront"
+      ],
+      "category": "Scrum Overview"
+    },
+    {
+      "id": "closure",
+      "en": "Closure (Post-game)",
+      "th": "เตรียมปิดงานเพื่อเผยแพร่ผลิตภัณฑ์",
+      "definition": "ช่วงเตรียมผลิตภัณฑ์ที่พัฒนาแล้วให้พร้อมเผยแพร่ทั่วไปตามกรอบ Phases ในสไลด์ เช่น รวมระบบ ทดสอบระบบ จัดทำเอกสารผู้ใช้ และฝึกอบรม",
+      "example": "รวมส่วนประกอบของระบบ ทดสอบการทำงานร่วมกัน แล้วเตรียมคู่มือให้ผู้ใช้ก่อน Release",
+      "tip": "เป็นช่วง Post-game ในกรอบที่วิชานี้สอน ไม่ใช่ Sprint Retrospective และไม่ได้หมายความว่าให้รอทดสอบทุกอย่างตอนท้าย",
+      "related": [
+        "planning-phase",
+        "defined-process",
+        "review",
+        "retro"
+      ],
+      "category": "Scrum Overview"
+    },
+    {
+      "id": "defined-process",
+      "en": "Defined Process",
+      "th": "กระบวนการที่กำหนดขั้นตอนชัดเจน",
+      "definition": "กระบวนการที่รู้วิธีทำ ขั้นตอน ข้อมูลนำเข้า และผลลัพธ์อย่างชัดเจน จึงกำหนดแนวทางทำงานล่วงหน้าได้ เหมาะกับงานที่เข้าใจและคาดการณ์ได้",
+      "example": "การจัดเตรียมเอกสารส่งมอบตามรายการที่รู้แน่นอนว่าต้องมีอะไรบ้าง",
+      "tip": "จำคู่เปรียบเทียบ: Defined รู้ขั้นตอนชัด ส่วน Empirical ต้องตรวจผลจริงแล้วปรับ สไลด์จัด Planning และ Closure ไว้ฝั่ง Defined process",
+      "related": [
+        "empirical",
+        "planning-phase",
+        "closure"
+      ],
+      "category": "Agile และ Scrum"
+    },
+    {
+      "id": "upfront",
+      "en": "Up-front Planning",
+      "th": "วางแผนล่วงหน้าก่อนลงมือ",
+      "definition": "การเตรียมแผนก่อนเริ่มทำงาน เพื่อให้เห็นทิศทางและข้อจำกัด ถ้าเป็น Detailed Up-front Planning จะลงรายละเอียดจำนวนมากตั้งแต่ต้น ทั้งที่ข้อมูลอาจยังไม่ครบและเปลี่ยนภายหลัง",
+      "example": "กำหนดเป้าหมายและแผน Release คร่าว ๆ ก่อนเริ่ม แต่ยังไม่จำเป็นต้องแตก Tasks ของทุก Sprint ล่วงหน้า",
+      "tip": "Up-front ไม่ได้แปลว่าผิดเสมอ วิชานี้เน้นสมดุล: มีภาพรวมตั้งแต่ต้น แล้วลงรายละเอียดแบบ Just-in-time เมื่อใกล้ทำ",
+      "related": [
+        "jit",
+        "stepwise",
+        "planning-phase"
+      ],
+      "category": "Scrum Overview"
     }
   ],
   "chapters": [
@@ -1707,7 +1767,7 @@ window.STUDY = {
               "บทเรียนครบเนื้อหา"
             ],
             [
-              "123",
+              "127",
               "คำศัพท์กดดูได้"
             ],
             [
@@ -2368,7 +2428,13 @@ window.STUDY = {
         "retro",
         "commitment",
         "execution",
-        "improvement"
+        "improvement",
+        "planning-phase",
+        "closure",
+        "defined-process",
+        "empirical",
+        "upfront",
+        "jit"
       ],
       "sources": [
         "s2",
@@ -2403,7 +2469,7 @@ window.STUDY = {
         },
         {
           "type": "paragraph",
-          "text": "Planning และ Closure มีลักษณะ **Defined process** มากกว่า ส่วน Sprint ใช้ **Empirical process** เพราะมีความไม่แน่นอน ทีมจึงต้องมีการควบคุมและจัดการความเสี่ยง"
+          "text": "[[planning-phase|Planning]] และ [[closure|Closure]] มีลักษณะ [[defined-process|Defined process]] มากกว่า ส่วน [[sprint|Sprint]] ใช้ [[empirical|Empirical process]] เพราะมีความไม่แน่นอน ทีมจึงต้องมีการควบคุมและจัดการความเสี่ยง"
         },
         {
           "type": "note",
@@ -2434,12 +2500,12 @@ window.STUDY = {
         },
         {
           "type": "heading",
-          "text": "สมดุล Up-front กับ Just-in-time"
+          "text": "สมดุล [[upfront|Up-front]] กับ [[jit|Just-in-time]]"
         },
         {
           "type": "list",
           "items": [
-            "Detailed Up-front Planning เสี่ยงข้อมูลไม่ครบ เหตุการณ์เปลี่ยน แผนถูกทิ้งหรือเสียแรงแก้",
+            "[[upfront|Detailed Up-front Planning]] เสี่ยงข้อมูลไม่ครบ เหตุการณ์เปลี่ยน แผนถูกทิ้งหรือเสียแรงแก้",
             "เสียโอกาสสร้าง Working software และอาจยึดแผนแม้ควรเปลี่ยน",
             "ใช้ [[stepwise]] สมดุลการมีภาพรวมกับลงรายละเอียดเมื่อใกล้ทำ"
           ],
