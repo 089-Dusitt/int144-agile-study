@@ -220,16 +220,17 @@
   .glossary-resizer:focus-visible { outline:3px solid var(--gold); outline-offset:-3px; }
   .resizing-glossary,.resizing-glossary * { cursor:col-resize!important; }
   .term-detail { flex:0 1 auto; min-height:110px; max-height:54%; padding:20px; }
-  .term-detail h3 { font-family:inherit; font-size:23px; font-weight:700; line-height:1.45; }
-  .term-detail .word-category { font-size:11px; letter-spacing:.3px; }
-  .term-detail .thai-name { font-size:15px; margin-bottom:12px; }
-  .term-detail p { font-size:calc(var(--reader-size) - 1px); line-height:1.85; }
-  .term-example { font-size:14px; line-height:1.8; padding:12px; }
-  .term-example span { font-size:11px; }
-  .term-tip { font-size:13px; line-height:1.8; }
-  .related-word { min-height:28px; font-size:12px; padding:4px 7px; }
-  .word-row strong { font-size:14px; }
-  .word-row small { font-size:12px; }
+  .term-detail,.term-list { font-size:var(--glossary-text-size,1rem); }
+  .term-detail h3 { font-family:inherit; font-size:1.4375em; font-weight:700; line-height:1.45; }
+  .term-detail .word-category { font-size:.6875em; letter-spacing:.3px; }
+  .term-detail .thai-name { font-size:.9375em; margin-bottom:12px; }
+  .term-detail p { font-size:.9375em; line-height:1.85; }
+  .term-example { font-size:.875em; line-height:1.8; padding:12px; }
+  .term-example span { font-size:.8em; }
+  .term-tip { font-size:.8125em; line-height:1.8; }
+  .related-word { min-height:28px; max-width:100%; overflow-wrap:anywhere; font-size:.75em; padding:4px 7px; }
+  .word-row strong { font-size:.875em; overflow-wrap:anywhere; }
+  .word-row small { font-size:.75em; }
   .search-field input { font-size:13px; }
 }
 @layer responsive {

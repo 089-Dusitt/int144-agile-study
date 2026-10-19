@@ -15,7 +15,8 @@
     font: Math.min(22, Math.max(14, Number(saved.font) || 16)),
     theme: saved.theme === 'dark' ? 'dark' : 'light',
     glossaryWidth: Number.isFinite(saved.glossaryWidth) ? saved.glossaryWidth : 390,
-    mobileGlossaryWidth: Number.isFinite(saved.mobileGlossaryWidth) ? saved.mobileGlossaryWidth : 380
+    mobileGlossaryWidth: Number.isFinite(saved.mobileGlossaryWidth) ? saved.mobileGlossaryWidth : 380,
+    glossaryScale: Math.max(80,Math.min(200,Number(saved.glossaryScale)||100))
   };
   let toastTimer, announceTimer, scrollTimer, mounted=false;
   const escapeHTML = x => String(x ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -36,7 +37,7 @@
     return result + escapeHTML(input.slice(start));
   }
   function persist() {
-    try { localStorage.setItem(storageKey, JSON.stringify({last:state.current, completed:[...state.completed], positions:state.positions, font:state.font, theme:state.theme, glossaryWidth:state.glossaryWidth, mobileGlossaryWidth:state.mobileGlossaryWidth})); } catch { /* Reading works without localStorage. */ }
+    try { localStorage.setItem(storageKey, JSON.stringify({last:state.current, completed:[...state.completed], positions:state.positions, font:state.font, theme:state.theme, glossaryWidth:state.glossaryWidth, mobileGlossaryWidth:state.mobileGlossaryWidth, glossaryScale:state.glossaryScale})); } catch { /* Reading works without localStorage. */ }
   }
   function announce(message) { clearTimeout(announceTimer); announceTimer=setTimeout(()=>{$('#announcer').textContent=message;},250); }
   function toast(message) { clearTimeout(toastTimer); $('#toast').textContent=message; $('#toast').classList.add('show'); toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2200); }
@@ -151,9 +152,6 @@
     grip.setAttribute('aria-valuemax',String(b.max));
     grip.setAttribute('aria-valuenow',String(width));
     grip.setAttribute('aria-valuetext',`${width} พิกเซล`);
-    $('#glossary-width-label').textContent=`${width} px`;
-    $('#glossary-narrower').disabled=width<=b.min;
-    $('#glossary-wider').disabled=width>=b.max;
     if(save) persist();
     return width;
   }
@@ -192,12 +190,24 @@
   });
   const resetPanel=()=>applyPanelWidth(panelBounds().mobile?380:390,true);
   grip.addEventListener('dblclick',resetPanel);
-  $('#glossary-narrower').addEventListener('click',()=>applyPanelWidth(applyPanelWidth()-40,true));
-  $('#glossary-wider').addEventListener('click',()=>applyPanelWidth(applyPanelWidth()+40,true));
-  $('#glossary-reset').addEventListener('click',resetPanel);
+  function applyGlossaryFont() {
+    document.documentElement.style.setProperty('--glossary-text-size',`${state.glossaryScale/100}rem`);
+    $('#glossary-font-label').textContent=`${state.glossaryScale}%`;
+    $('#glossary-font-smaller').disabled=state.glossaryScale<=80;
+    $('#glossary-font-larger').disabled=state.glossaryScale>=200;
+  }
+  function changeGlossaryFont(value) {
+    state.glossaryScale=Math.max(80,Math.min(200,value));
+    applyGlossaryFont();persist();
+    announce(`ตัวอักษรคำศัพท์ ${state.glossaryScale} เปอร์เซ็นต์`);
+  }
+  $('#glossary-font-smaller').addEventListener('click',()=>changeGlossaryFont(state.glossaryScale-10));
+  $('#glossary-font-larger').addEventListener('click',()=>changeGlossaryFont(state.glossaryScale+10));
+  $('#glossary-font-reset').addEventListener('click',()=>changeGlossaryFont(100));
   window.addEventListener('resize',()=>{finishPanelDrag();applyPanelWidth();});
   window.addEventListener('blur',finishPanelDrag);
   applyPanelWidth();
+  applyGlossaryFont();
   const plainText=x=>String(x||'').replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g,'$2').replace(/\[\[([^\]]+)\]\]/g,(_,id)=>byTerm.get(id)?.en||id).replace(/\*\*|`/g,'');
   const chapterSearch=chapters.map(c=>({id:c.id,title:c.title,subtitle:c.subtitle,text:plainText(`${c.title} ${c.subtitle} ${JSON.stringify(c.blocks)}`).toLocaleLowerCase()}));
   function renderSearch() {
