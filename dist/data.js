@@ -1853,6 +1853,7 @@ window.STUDY = {
         {
           "type": "cards",
           "ids": [
+            "class-quiz",
             "quick-review",
             "agile",
             "empirical",
@@ -3787,6 +3788,118 @@ window.STUDY = {
       ]
     },
     {
+      "id": "class-quiz",
+      "short": "Quiz รวมจากคาบเรียน",
+      "title": "ลองตอบ ก่อนเปิดเฉลย",
+      "subtitle": "88 ข้อจากคำถามในคาบ ท้ายคาบ และสไลด์ · พร้อมเหตุผลและที่มา",
+      "group": "ฝึกก่อนสอบ",
+      "minutes": 30,
+      "terms": [
+        "manifesto",
+        "working-software",
+        "timebox",
+        "scope",
+        "moscow",
+        "value",
+        "deliver",
+        "release",
+        "adaptation",
+        "risk",
+        "feedback",
+        "improvement",
+        "team",
+        "defined-process",
+        "empirical",
+        "responsibility",
+        "accountability",
+        "cross-functional",
+        "t-shaped",
+        "increment",
+        "jit",
+        "upfront",
+        "stepwise",
+        "planning-phase",
+        "planning",
+        "sprint",
+        "daily",
+        "retro",
+        "story",
+        "refinement",
+        "backlog",
+        "emergent",
+        "detailed",
+        "deep",
+        "pbi",
+        "wont",
+        "must",
+        "should",
+        "workaround",
+        "mrf",
+        "fixed-date",
+        "sprint-backlog",
+        "dod",
+        "initial-goal",
+        "team-commitment",
+        "sprint-goal",
+        "ac",
+        "flow",
+        "execution",
+        "mini-waterfall",
+        "swarming",
+        "po",
+        "stakeholders",
+        "sm",
+        "self-managing",
+        "coaching",
+        "impediment",
+        "working-team",
+        "collective",
+        "change-agent",
+        "review",
+        "appropriate",
+        "realistic",
+        "challenge",
+        "prioritized",
+        "transparency",
+        "estimate",
+        "capacity",
+        "unplanned",
+        "buffer",
+        "spike",
+        "knowledge",
+        "value-focused",
+        "working-group",
+        "effectiveness",
+        "efficiency",
+        "debt",
+        "refactoring",
+        "iterative",
+        "incremental"
+      ],
+      "sources": [
+        "g11",
+        "g21",
+        "s1",
+        "g12a",
+        "g12b",
+        "s2",
+        "g15",
+        "g25",
+        "s5",
+        "g13",
+        "g23",
+        "s3",
+        "g14",
+        "g24",
+        "s4"
+      ],
+      "blocks": [
+        {
+          "type": "quiz-hub"
+        }
+      ]
+    },
+    {
       "id": "sources",
       "short": "เอกสารอ้างอิง",
       "title": "เอกสารที่ใช้อ้างอิง",
@@ -3818,5 +3931,3257 @@ window.STUDY = {
         }
       ]
     }
+  ],
+  "quizzes": [
+    {
+      "id": "class-1-end-1",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "Agile ให้ความสำคัญกับ Working software มากกว่าเอกสาร จึงหมายความว่าเอกสารและแผนไม่มีคุณค่าเลย",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์ย้ำว่าด้านขวาของ Manifesto ยังมีคุณค่า แค่ให้คุณค่าด้านซ้ายมากกว่า ไม่ได้ยกเลิกเอกสารหรือการวางแผน",
+      "terms": [
+        "manifesto",
+        "working-software"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 8"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-2",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "เมื่อหมด Timebox แต่งานยังไม่เสร็จ ควรเลื่อน deadline ออกไป",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Timeboxing มี hard deadline เมื่อหมดเวลาต้องจบ จึงต้องเลือกงานสำคัญและจัดขอบเขตให้เหมาะกับเวลาที่มี",
+      "terms": [
+        "timebox",
+        "scope"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 9"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-3",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "ในแนวทาง DSDM ที่อาจารย์สอน สิ่งใดปรับได้เมื่อกำหนดเวลา ต้นทุน และคุณภาพไว้แล้ว?",
+      "options": [
+        "Time",
+        "Cost",
+        "Quality",
+        "Features / Scope"
+      ],
+      "answers": [
+        3
+      ],
+      "explanation": "ฟิกซ์ Time, Cost และ Quality แล้วปรับขอบเขตฟีเจอร์ โดยทำส่วนที่สำคัญก่อน",
+      "terms": [
+        "scope",
+        "moscow"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 10"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-4",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "หลักการแรกของ Agile เน้นทำให้ลูกค้าพอใจด้วยราคาที่ถูกลงและความเร็วเพียงอย่างเดียว",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "หลักการระบุ early and continuous delivery of valuable software ต้องส่งมอบซอฟต์แวร์ที่มีคุณค่าตั้งแต่ต้นและต่อเนื่อง ไม่ใช่แข่งราคาหรือความเร็วอย่างเดียว",
+      "terms": [
+        "value",
+        "deliver"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 14"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-5",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "คำที่ใช้ในหลักการ Agile เรื่องส่งมอบซอฟต์แวร์ตั้งแต่ต้นและอย่างต่อเนื่อง คือคำใด?",
+      "options": [
+        "Release เท่านั้น",
+        "Delivery",
+        "Deployment เท่านั้น",
+        "Contract"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์แยก Delivery ที่ฝั่งพัฒนาส่งมอบ ออกจาก Release ที่ฝั่งธุรกิจตัดสินใจปล่อยให้ผู้ใช้ใช้จริง",
+      "terms": [
+        "deliver",
+        "release"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 14–15"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-6",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "เมื่อลูกค้าขอเปลี่ยน requirement ต้องยอมทำทันทีโดยไม่ประเมินผลกระทบ",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ยินดีต่อการเปลี่ยนที่เพิ่มประโยชน์ แต่ต้องให้ข้อมูลผลกระทบ เวลา และข้อจำกัดเพื่อให้ฝั่งธุรกิจตัดสินใจอย่างเข้าใจ",
+      "terms": [
+        "adaptation",
+        "risk"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 16"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-7",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "ตามมุมมองที่อาจารย์อธิบาย Interactions สำคัญกว่า Individuals",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์อธิบายว่าทั้งคนและปฏิสัมพันธ์สำคัญควบคู่กัน ไม่ควรเลือกอย่างใดอย่างหนึ่งแล้วละเลยอีกอย่าง",
+      "terms": [
+        "manifesto"
+      ],
+      "note": "ข้อนี้อิงมุมมองที่อาจารย์เฉลยใน G2 บท 1 ไม่ใช่ข้อความจัดอันดับใน Agile Manifesto",
+      "references": [
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 8"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-8",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "Working software เป็นตัววัดความก้าวหน้าหลักของ Agile",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "เป็นข้อความหลักการโดยตรง: working software is the primary measure of progress",
+      "terms": [
+        "working-software"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 23"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-9",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "ข้อใดไม่ใช่องค์ประกอบ 4 คำของ Heart of Agile ที่สอนในคาบ?",
+      "options": [
+        "Collaborate",
+        "Deliver",
+        "Reflect และ Improve",
+        "Estimate"
+      ],
+      "answers": [
+        3
+      ],
+      "explanation": "องค์ประกอบคือ Collaborate, Deliver, Reflect และ Improve ส่วน Estimate ไม่ใช่หนึ่งในสี่คำนี้",
+      "terms": [
+        "feedback",
+        "improvement"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 27"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-end-10",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "end",
+      "prompt": "The New New Product Development Game ให้ความสำคัญกับคู่ใด?",
+      "options": [
+        "Cost และ Variety",
+        "Speed และ Flexibility",
+        "Documentation และ Contract",
+        "Hierarchy และ Control"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์เฉลย Speed and Flexibility การทำงานเป็นหน่วยเดียวแบบรักบี้ช่วยให้เคลื่อนและปรับพร้อมกัน",
+      "terms": [
+        "team",
+        "value"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g21",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 31–32"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-1",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "ตามกรอบ Phases ในวิชานี้ ทุกช่วงของ Scrum ใช้ Empirical process เหมือนกันทั้งหมด",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "สไลด์แยก Planning / Closure เป็น Defined processes ส่วน Game / Development Sprints เป็น Empirical process",
+      "terms": [
+        "defined-process",
+        "empirical"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 6–7"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-2",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "เมื่อต้องการให้เกิดผลลัพธ์ที่ดี อาจารย์เน้นแนวคิดใดมากกว่าการแบ่งหน้าที่เพียงอย่างเดียว?",
+      "options": [
+        "Responsibility เท่านั้น",
+        "Accountability ต่อผลลัพธ์",
+        "ส่งงานของตัวเองแล้วจบ",
+        "ให้หัวหน้ารับผิดคนเดียว"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Responsibility บอกว่าใครทำอะไร ส่วน Accountability คือเป็นเจ้าของและตอบต่อผลลัพธ์ การแบ่งงานอย่างเดียวไม่รับประกันผลลัพธ์",
+      "terms": [
+        "responsibility",
+        "accountability"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 13–15"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-3",
+      "lesson": 2,
+      "lessons": [
+        2,
+        5
+      ],
+      "phase": "end",
+      "prompt": "Cross-functional หมายความว่าสมาชิกแต่ละคนต้องมีครบทุก skill ที่ Sprint นั้นต้องใช้",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "คำสำคัญคือ collectively ทีมมีทักษะรวมกันเพียงพอ ไม่ใช่แต่ละคนต้องเชี่ยวชาญทุกอย่าง",
+      "terms": [
+        "cross-functional",
+        "t-shaped"
+      ],
+      "note": "คำถามประเด็นนี้ปรากฏซ้ำใน Quiz ท้ายคาบบท 2 และบท 5 จึงรวมเป็นข้อเดียว",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 16"
+        },
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 21"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-4",
+      "lesson": 2,
+      "lessons": [
+        2,
+        5
+      ],
+      "phase": "end",
+      "prompt": "Scrum ต้องระบุคนใดคนหนึ่งไว้ล่วงหน้าให้ accountable ต่อการส่งมอบ Increment แทนทั้งทีม",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ทั้ง Scrum Team accountable ต่อ Increment ที่มีคุณค่าและใช้งานได้ ไม่โยน ownership ของผลลัพธ์ให้คนเดียว",
+      "terms": [
+        "team",
+        "accountability",
+        "increment"
+      ],
+      "note": "คำถามประเด็นนี้ปรากฏซ้ำใน Quiz ท้ายคาบบท 2 และบท 5 จึงรวมเป็นข้อเดียว",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 15"
+        },
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 20"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-5",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "Scrum ใช้ Just-in-time planning เป็นหลักจนแทบไม่ต้องมี Up-front planning",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์เน้น balance ระหว่าง Up-front และ JIT มีภาพรวมก่อน แล้วค่อยเพิ่มรายละเอียดเมื่อใกล้จำเป็น",
+      "terms": [
+        "jit",
+        "upfront",
+        "stepwise"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 22–26"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-6",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "เมื่อเริ่มต้นโครงการ ควรเริ่มด้วย Sprint Planning ทันที",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "โจทย์หลอกที่คำว่า project ไม่ใช่ sprint เริ่มจากภาพรวม Product planning และ Release planning ก่อนลงรายละเอียด Sprint",
+      "terms": [
+        "planning-phase",
+        "planning"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 25–29"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-7",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "ตามปกติ ระยะเวลา Sprint เปลี่ยนไปตามปริมาณงานของแต่ละรอบ",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ให้ Sprint duration สม่ำเสมอ ไม่ขยายตามงาน ปรับขอบเขตให้พอดีกรอบเวลา",
+      "terms": [
+        "sprint",
+        "timebox"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 31"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-8",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "Sprint Planning ทำตอนท้าย Sprint เพื่อวางแผนให้ Sprint นั้น",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Sprint Planning เปิด Sprint และวางแผนของ Sprint ที่กำลังเริ่ม ไม่ใช่ทำหลังงานรอบนั้นจบ",
+      "terms": [
+        "planning"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 33–34"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-9",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "ในคำเรียกที่อาจารย์ใช้ Daily Scrum อาจเรียกว่า Stand-up meeting",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "เป็นชื่อที่มักใช้เรียกในคาบ อาจารย์อธิบายการยืนประชุมเพื่อช่วยให้กระชับ แต่ชื่อเรียกนี้ไม่ได้ทำให้การยืนเป็นเงื่อนไขบังคับของ Scrum",
+      "terms": [
+        "daily"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 37"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-end-10",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "end",
+      "prompt": "ถ้าทีมทำงานร่วมกันได้ดีอยู่แล้ว สามารถตัด Sprint Retrospective ออกได้",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ยังต้อง inspect และ improve กระบวนการ อาจารย์ไม่ได้กำหนดให้ Retro เป็น optional แม้ทีมคิดว่าทำได้ดีอยู่แล้ว",
+      "terms": [
+        "retro",
+        "improvement"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g12b",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 39"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-1",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "User Story มีเพียง Role กับ Action ก็ครบแล้ว",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "รูปแบบที่สอนมี Role / User, Action และ Benefit / Value ในส่วน so that",
+      "terms": [
+        "story",
+        "value"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 5"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-2",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "User Story ต้องระบุรายละเอียดทั้งหมดที่ใช้พัฒนาให้ครบตั้งแต่แรก",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "เป็น placeholder for conversation ต้องพูดคุยและค่อย refine ไม่ใช่เอกสาร specification ที่ตรึงรายละเอียดทั้งหมดตั้งแต่ต้น",
+      "terms": [
+        "story",
+        "refinement"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 8–11"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-3",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "Product Backlog จะถือว่าเสร็จสิ้นเมื่อ product ถูก retire และไม่ต้องพัฒนาหรือปรับปรุงต่อแล้ว",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "อาจารย์อธิบาย never complete ระหว่าง product ยังมีชีวิต จึงต้องปรับ Backlog ต่อ เมื่อ retire จึงไม่มีเหตุให้อัปเดตต่อ",
+      "terms": [
+        "backlog",
+        "emergent"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 4"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-4",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "PBI ทุกตัวใน Product Backlog ควรมีรายละเอียดมากเท่ากัน",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Detailed Appropriately ให้ตัวที่ใกล้ทำมีรายละเอียดมากกว่า ตัวไกลยังใหญ่และหยาบได้",
+      "terms": [
+        "detailed",
+        "deep"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 16"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-5",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "ข้อใดไม่ใช่ DEEP?",
+      "options": [
+        "Detailed Appropriately",
+        "Emergent",
+        "Estimated",
+        "Documented Completely"
+      ],
+      "answers": [
+        3
+      ],
+      "explanation": "DEEP คือ Detailed Appropriately, Emergent, Estimated, Prioritized ไม่มี Documented Completely",
+      "terms": [
+        "deep"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 15–19"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-6",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "เมื่อแตก PBI แต่ละส่วนที่แยกออกมาควรยัง demonstrate ได้และทำงานให้คุณค่าได้",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "แบ่งเป็น PBI ที่เล็กลงและยังใช้งานได้ ไม่ใช่แค่แยกงานเป็นชั้น UI / API / DB ที่ยังส่งมอบคุณค่าเองไม่ได้",
+      "terms": [
+        "pbi",
+        "refinement",
+        "value"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 25–32"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-7",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "Won’t-have หมายความว่าฟีเจอร์นั้นจะไม่ถูกพัฒนาอีกเลยตลอดอายุ product",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Won’t-have ผูกกับ time frame ที่กำลังจัดลำดับ อาจย้ายเป็น Must / Should ของ Release ถัดไปหรือเปลี่ยนตามข้อมูลใหม่",
+      "terms": [
+        "wont",
+        "moscow"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 39–42"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-8",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "MoSCoW กลุ่มใดที่หากขาดแล้วไม่มี workaround ที่ยอมรับได้สำหรับขอบเขตนั้น?",
+      "options": [
+        "Must-have",
+        "Should-have",
+        "Could-have",
+        "ทุกกลุ่มเหมือนกัน"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "Must-have จำเป็นต่อความอยู่รอดของ Release หรือเป้าหมายที่กำหนด ส่วน Should ยังมี workaround แม้ไม่สะดวก",
+      "terms": [
+        "must",
+        "should",
+        "workaround"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 39–41"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-9",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "ทีมคาดว่าทำได้ 108–132 story points ตำแหน่ง Must-have แบบใดลดความเสี่ยงได้ดีที่สุด?",
+      "options": [
+        "Must ทั้งหมดอยู่ในส่วน Will have ที่ไม่เกินขอบล่าง 108",
+        "Must อยู่ใน Might have ระหว่าง 108–132",
+        "Must เกิน 132",
+        "ใส่ Must ให้เต็ม 132 เสมอ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "ตรงกับภาพ (a) / Good news: ไม่ฝาก Must ไว้ในส่วนที่ยังไม่มั่นใจว่าจะทำได้ ต้องเหลือพื้นที่เผื่อความไม่แน่นอน",
+      "terms": [
+        "must",
+        "risk",
+        "mrf"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 43"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-end-10",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "end",
+      "prompt": "Release Planning ที่อาจารย์สอนในหัวข้อนี้เป็นแบบใด?",
+      "options": [
+        "Fixed Scope",
+        "Fixed Date",
+        "เลื่อนวันได้จนกว่างานจะครบ",
+        "ไม่กำหนดเวลา"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "หัวข้อ Fixed Date Release Planning กำหนดวันปล่อย แล้วจัดขอบเขตและลำดับงานตามความสำคัญ",
+      "terms": [
+        "fixed-date",
+        "scope"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g23",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 33–43"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-end-1",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "ข้อใดไม่ใช่องค์ประกอบใน Sprint Backlog ตามคำเฉลยในคาบ?",
+      "options": [
+        "Sprint Goal",
+        "PBI ที่เลือก",
+        "แผนและ Tasks ที่ต้องทำ",
+        "Definition of Done"
+      ],
+      "answers": [
+        3
+      ],
+      "explanation": "Sprint Backlog มี Why / What / How ส่วน DoD เป็นข้อตกลงด้านคุณภาพที่ใช้กับงาน ไม่ใช่รายการองค์ประกอบของ Sprint Backlog",
+      "terms": [
+        "sprint-backlog",
+        "dod"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 7–8"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-end-2",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "ในตัวอย่างการจัดตารางปกติที่อาจารย์ใช้ Sprint เริ่มในวันทำงานแรกของสัปดาห์",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "อาจารย์ยกวันจันทร์ หรือวันทำงานถัดไปหากเป็นวันหยุด เพื่อให้รอบสม่ำเสมอ แต่ไม่ใช่กฎสากลว่า Scrum ต้องเริ่มวันจันทร์เสมอ",
+      "terms": [
+        "sprint"
+      ],
+      "note": "Transcript เก็บคำเฉลยเรื่องวันทำงานแรก แต่โจทย์เดิมไม่ครบ จึงจำกัดบริบทให้ตรงตัวอย่างในคาบ",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 4"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-end-3",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "Developers ต้อง commit ทุกอย่างตาม Sprint Goal ที่ PO กำหนดมา โดยไม่ทบทวนร่วมกัน",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "PO เสนอ Initial Sprint Goal ก่อน Developers และทีมร่วมปรับและตกลงโดยดูความสามารถจริง คำว่า must commit ตามที่สั่งคือจุดหลอก",
+      "terms": [
+        "initial-goal",
+        "planning",
+        "team-commitment"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 5, 10"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-end-4",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "ระหว่าง Sprint ห้ามเปลี่ยนรายละเอียดงานทุกชนิด แม้ไม่ส่งผลต่อ Sprint Goal",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "รายละเอียดและแผนปรับได้ตามสิ่งที่เรียนรู้ ตราบใดที่ไม่ทำลาย Sprint Goal และไม่ลดคุณภาพ",
+      "terms": [
+        "sprint-goal",
+        "adaptation"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 4–5"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-end-5",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "Definition of Done เป็นมาตรฐานร่วมที่นำไปใช้กับ PBI ทุกตัว",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "DoD เป็นเกณฑ์คุณภาพร่วม ส่วน Acceptance Criteria ระบุเงื่อนไขเฉพาะของแต่ละ item",
+      "terms": [
+        "dod",
+        "ac"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 11–13"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-end-6",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "วัตถุประสงค์หลักของ Daily Scrum คือใช้เวลาหารือ solution ของปัญหาอย่างละเอียด",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "เน้น sync, inspect ความก้าวหน้า และ adapt แผนรายวัน การ discuss solution ยาวให้ผู้เกี่ยวข้องคุยต่อหลังประชุม",
+      "terms": [
+        "daily",
+        "flow"
+      ],
+      "note": "คำถามนี้ปรากฏทั้งสไลด์หน้า 46 และ Quiz ท้ายคาบ รวมไว้ที่ข้อเดียว",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 44–47"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 46–47"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript",
+      "alsoPhases": [
+        "slide"
+      ]
+    },
+    {
+      "id": "class-4-end-7",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "end",
+      "prompt": "เพราะ Sprint เป็น Mini project จึงควรทำงานภายในแบบ Mini Waterfall",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์แยก Mini project ออกจาก Mini Waterfall การทำทุก PBI เป็น phase พร้อมกันเสี่ยงไม่มีอันใดเสร็จเมื่อหมดเวลา",
+      "terms": [
+        "execution",
+        "mini-waterfall",
+        "swarming"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g24",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 33–39"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-1",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "Product Owner เป็นคณะกรรมการที่ทำหน้าที่เพียงเป็นตัวแทน stakeholders",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "PO เป็นหนึ่งคน ไม่ใช่ committee และ accountable ต่อการ maximize value และจัดการ Product Backlog มากกว่าแค่ส่งต่อความต้องการ",
+      "terms": [
+        "po",
+        "stakeholders"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 34–36"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-2",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "Scrum Master สามารถสั่งให้ Developers หยิบ task ใดและกำหนดวิธีทำแทนทีมได้",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ทีมเป็น self-managing SM ช่วยเรื่อง Scrum process และ coaching ไม่ใช่ command-and-control manager",
+      "terms": [
+        "sm",
+        "self-managing"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 45–46"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-3",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "Scrum Master รับผิดชอบเหมือน Project Manager ที่ต้องคอยตามให้งานพัฒนาเสร็จ",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "SM accountable ต่อประสิทธิผลของ Scrum ช่วยให้ทีมมี process ที่ดี ไม่รับช่วงเป็นผู้ควบคุมงานพัฒนาแทน Developers",
+      "terms": [
+        "sm",
+        "accountability"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 46"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-4",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "เมื่อทีมแก้ปัญหาเองได้ Scrum Master ควรลงไปแก้แทนทั้งหมด",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ควร coach ให้ทีมคิดและพัฒนาความสามารถในการแก้เอง ส่วนอุปสรรคเกินอำนาจทีมจึงช่วยประสานจัดการ",
+      "terms": [
+        "coaching",
+        "impediment"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 41–43, 48–49"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-5",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "Accountability เน้น ownership ของ outcome มากกว่าระบุเพียงงานที่ได้รับมอบหมาย",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "เป็นเจ้าของและตอบต่อผลลัพธ์ ส่วนการระบุ task / duty อยู่ฝั่ง Responsibility",
+      "terms": [
+        "accountability",
+        "responsibility"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 13"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-6",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "ข้อใดไม่ใช่หน้าที่ของ PO ตาม Quiz ท้ายคาบ?",
+      "options": [
+        "จัดลำดับ PBI",
+        "บริหารด้านคุณค่าทางธุรกิจ",
+        "ช่วยกำหนด Acceptance Criteria",
+        "Assign Tasks ให้ Developers แต่ละคน"
+      ],
+      "answers": [
+        3
+      ],
+      "explanation": "PO ดูคุณค่า ลำดับและความชัดเจนของงาน แต่ Developers จัดแผนและแบ่งงานภายในทีมเอง",
+      "terms": [
+        "po",
+        "ac",
+        "self-managing"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 34–39"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-7",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "ข้อใดเป็นลักษณะของ Working Team?",
+      "options": [
+        "Individual work products เท่านั้น",
+        "Collective work products",
+        "หัวหน้าคนเดียวตัดสินใจและแจกงานทั้งหมด",
+        "ประเมินผลงานทางอ้อมเท่านั้น"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ทีมมีผลงานร่วม ความรับผิดชอบร่วม และลงมือแก้ปัญหาด้วยกัน ไม่ใช่แค่คุยแล้วแยกไปทำส่วนของตัวเอง",
+      "terms": [
+        "working-team",
+        "collective"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 14"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-end-8",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "end",
+      "prompt": "หน้าที่ Change Agent ของ Scrum Master จำกัดอยู่ภายใน Scrum Team เท่านั้น",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "รวมการช่วยให้องค์กรเข้าใจและปรับวิธีทำงานเพื่อรองรับ Scrum ด้วย ไม่จำกัดเฉพาะคนในทีม",
+      "terms": [
+        "change-agent",
+        "sm"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วง Quiz ท้ายคาบ / เฉลยท้ายคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 50"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-1",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "Agile ให้ความสำคัญกับเรื่องใดมากที่สุดในคำถามเปิดคาบ?",
+      "options": [
+        "ต้นทุนต่ำที่สุด",
+        "ทำให้เร็วที่สุด",
+        "ใช้กระบวนการตายตัว",
+        "ส่งมอบ Value"
+      ],
+      "answers": [
+        3
+      ],
+      "explanation": "ความเร็วมีประโยชน์ แต่ถ้าสิ่งที่ทำใช้ประโยชน์ไม่ได้ก็ยังไม่ตอบเป้า ต้องส่งมอบคุณค่า",
+      "terms": [
+        "value"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 8, 14"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-2",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "เลือกด้านที่ Manifesto ให้คุณค่ามากกว่าให้ครบทั้ง 4 คู่",
+      "options": [
+        "Individuals and interactions",
+        "Working software",
+        "Customer collaboration",
+        "Responding to change",
+        "Comprehensive documentation",
+        "Contract negotiation",
+        "Following a plan",
+        "Processes and tools"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "ด้านซ้ายมีคนและปฏิสัมพันธ์ ซอฟต์แวร์ที่ทำงานได้ การร่วมมือกับลูกค้า และการตอบสนองการเปลี่ยนแปลง ด้านขวายังมีคุณค่าอยู่",
+      "terms": [
+        "manifesto"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 8"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-3",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "Delivery กับ Release เป็นสิ่งเดียวกันเสมอ",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Delivery คือการส่งมอบงาน ส่วน Release คือทำให้ผู้ใช้เข้าถึงและใช้จริงได้ การส่งมอบอาจเกิดก่อนการตัดสินใจปล่อยใช้",
+      "terms": [
+        "deliver",
+        "release"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 14–15"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-4",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "เมื่อทีมส่งมอบซอฟต์แวร์ที่พร้อมแล้ว ใครควรตัดสินใจว่าจะ Release ทางธุรกิจหรือไม่?",
+      "options": [
+        "ทีมพัฒนาเพียงฝ่ายเดียว",
+        "ฝั่งลูกค้า / ธุรกิจ โดย PO ประสานเรื่องคุณค่า",
+        "ผู้เขียนโค้ดคนแรก",
+        "เครื่องมือทดสอบ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์แยกการส่งมอบของฝั่งพัฒนาออกจากการตัดสินใจปล่อยใช้ของฝั่งลูกค้า / ธุรกิจ โดยทีมให้ข้อมูลความพร้อมและข้อจำกัด",
+      "terms": [
+        "release",
+        "po"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 14–15"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-5",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "ตามหลักการ Agile ควรส่งมอบ Working software บ่อยแค่ไหน?",
+      "options": [
+        "รอให้ครบ scope ทั้งหมดก่อน",
+        "นาน ๆ ครั้งเพื่อไม่ต้องรับ feedback",
+        "ส่งมอบถี่ โดยชอบช่วงเวลาที่สั้นกว่า",
+        "ส่งมอบได้เฉพาะเมื่อเลิกโครงการ"
+      ],
+      "answers": [
+        2
+      ],
+      "explanation": "หลักการชอบ shorter timescale เพื่อรับ feedback และตอบสนองการเปลี่ยนแปลง อาจารย์ระบุว่าการส่งมอบเป็นรอบก็ใช้ได้ ไม่ใช่ว่าต้องปล่อย production ทุกนาที",
+      "terms": [
+        "feedback",
+        "deliver"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 15"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-6",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "เมื่อมีการขอเปลี่ยน requirement ใกล้ส่งมอบ แนวทางใดตรงกับคำอธิบายอาจารย์?",
+      "options": [
+        "เปลี่ยนทันทีโดยไม่ประเมิน",
+        "ห้ามเปลี่ยนทุกกรณี",
+        "ประเมินผลกระทบและคุณค่ากับฝั่งธุรกิจ แล้วตกลงการเปลี่ยน",
+        "ถ้าจ่ายเงินเพิ่มให้รับทุกอย่างโดยไม่ดูผล"
+      ],
+      "answers": [
+        2
+      ],
+      "explanation": "Welcome change เพื่อประโยชน์การแข่งขันของลูกค้า แต่ต้องประเมินและสื่อสารผลกระทบ ไม่ใช่รับทุก request อย่างไร้เงื่อนไข",
+      "terms": [
+        "risk",
+        "adaptation"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 16"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-1-inclass-7",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "ควร Reflect เพื่อปรับปรุงบ่อยเพียงใดตามคำตอบที่อาจารย์อธิบาย?",
+      "options": [
+        "ปีละครั้งเท่านั้น",
+        "ถี่จนไม่มีเวลาทำงานหลัก",
+        "สม่ำเสมอและบ่อยพอ โดยไม่รบกวนงานหลักมากเกินไป",
+        "รอจนเกิดความล้มเหลวใหญ่ก่อน"
+      ],
+      "answers": [
+        2
+      ],
+      "explanation": "ต้องมี feedback loop และปรับปรุงต่อเนื่อง มีได้ทั้งระหว่างทางและตอนจบรอบ แต่ไม่ใช้เวลาทั้งหมดไปกับการประชุมสะท้อนผล",
+      "terms": [
+        "retro",
+        "improvement"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 25"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-inclass-1",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "inclass",
+      "prompt": "คำใดหมายถึงทีมมีทักษะรวมกันครบพอที่จะสร้างคุณค่า?",
+      "options": [
+        "Self-managing",
+        "Cross-functional",
+        "Individual accountability",
+        "Hierarchy"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Cross-functional ดูองค์ประกอบทักษะรวมของทีม ส่วน Self-managing ดูอำนาจจัดการว่าใครทำอะไร เมื่อไร อย่างไร",
+      "terms": [
+        "cross-functional",
+        "self-managing"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 16"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-inclass-2",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "inclass",
+      "prompt": "Scrum Master ส่งเสริมและสนับสนุน Scrum กับใครบ้างในคำถามในคาบ?",
+      "options": [
+        "Product Owner",
+        "Developers",
+        "องค์กรและผู้เกี่ยวข้องภายนอกทีม",
+        "เฉพาะ Scrum Master คนอื่น"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "อาจารย์ตัดตัวเลือกที่ว่าโปรโมทเฉพาะ SM ด้วยกัน เป้าหมายคือช่วยทีมและองค์กรนำ Scrum ไปใช้ได้สำเร็จ",
+      "terms": [
+        "sm",
+        "change-agent"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 20"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-inclass-3",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "inclass",
+      "prompt": "แนวทางวางแผนที่อาจารย์เลือกแทน Detailed Up-front อย่างเดียว หรือ JIT อย่างเดียว คืออะไร?",
+      "options": [
+        "Detailed Up-front ทุกอย่าง",
+        "Just-in-time ทุกอย่าง",
+        "Stepwise Refinement / Multilevel Planning",
+        "ไม่ต้องมีแผน"
+      ],
+      "answers": [
+        2
+      ],
+      "explanation": "เริ่มจากภาพรวมที่สำคัญ แล้วเพิ่มรายละเอียดตามลำดับและเมื่อใกล้ใช้ เป็นการ balance Up-front กับ JIT",
+      "terms": [
+        "stepwise",
+        "jit",
+        "upfront"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 22–29"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-inclass-4",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "inclass",
+      "prompt": "ถ้าจะทำ 3 Releases ควรวางแผนรายละเอียดอย่างไร?",
+      "options": [
+        "ลงรายละเอียดทุก Release ก่อนเริ่ม Sprint แรก",
+        "มีภาพรวม วางแผน Release 1 แล้วทำ Sprints และใช้ feedback ก่อนลงรายละเอียด Release ถัดไป",
+        "วางแผนเฉพาะวันพรุ่งนี้โดยไม่เห็นเป้าหมาย",
+        "ห้ามแก้แผน Release"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ถ้าลงรายละเอียด Release 1–3 ทั้งหมดทันที จะเสี่ยงเสียแรงเมื่อ feedback เปลี่ยน จึงค่อย refine โดยยังมีภาพรวมระยะยาว",
+      "terms": [
+        "upfront",
+        "jit",
+        "stepwise"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g12a",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s2",
+          "location": "PDF หน้า 25–29"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-2-slide-1",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "slide",
+      "prompt": "ลำดับกิจกรรมหลักใน Sprint ข้อใดตรงกับภาพรวมในสไลด์?",
+      "options": [
+        "Review → Planning → เริ่มพัฒนา → Retro",
+        "Planning → Execution พร้อม Daily Scrum → Review → Retrospective",
+        "เริ่มพัฒนา → Release → ค่อย Planning",
+        "Daily Scrum ครั้งเดียวตอนท้าย → จบ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Sprint เปิดด้วย Planning ระหว่างพัฒนามี Daily Scrum แล้วตรวจ Product ใน Review และกระบวนการใน Retro",
+      "terms": [
+        "planning",
+        "execution",
+        "daily",
+        "review",
+        "retro"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s2",
+          "location": "PDF หน้า 32"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-2-slide-2",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "slide",
+      "prompt": "คุณลักษณะของ Team Commitment ที่สไลด์ถามคืออะไร?",
+      "options": [
+        "เร็วและรับงานมากที่สุด",
+        "Appropriate และ Realistic",
+        "PO สั่งแล้วต้องทำทั้งหมด",
+        "ลดคุณภาพเพื่อให้งานครบ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "เหมาะกับเป้าหมายและทำได้จริงตามเวลา ความสามารถ และข้อจำกัดของทีม",
+      "terms": [
+        "team-commitment",
+        "appropriate",
+        "realistic"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s2",
+          "location": "PDF หน้า 36"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "มีคำตอบระบุไว้ในสไลด์หน้า 36"
+    },
+    {
+      "id": "class-2-slide-3",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "slide",
+      "prompt": "Product Owner สามารถตัดสินปริมาณงานที่ Developers ต้อง commit แทนทีมได้",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "สไลด์ตอบ No ทีมต้องดู capacity และความเป็นไปได้จริง ไม่ใช่ PO กำหนดฝ่ายเดียว",
+      "terms": [
+        "po",
+        "team-commitment"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s2",
+          "location": "PDF หน้า 36"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "มีคำตอบระบุไว้ในสไลด์หน้า 36"
+    },
+    {
+      "id": "class-2-slide-4",
+      "lesson": 2,
+      "lessons": [
+        2
+      ],
+      "phase": "slide",
+      "prompt": "Scrum Master กำหนด commitment แทนทีมไม่ได้ แต่ช่วย challenge เหตุผลของทีมได้",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "คำตอบบนสไลด์คือ No, but can challenge the team ช่วยถามให้ทบทวน ไม่ใช่สั่งจำนวนงาน",
+      "terms": [
+        "challenge",
+        "sm"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s2",
+          "location": "PDF หน้า 36"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "มีคำตอบระบุไว้ในสไลด์หน้า 36"
+    },
+    {
+      "id": "class-3-slide-1",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "User Story ของ ATM ที่อยากไม่ติดเวลาเปิดธนาคารหรือคิวยาว สื่อคุณค่าใด?",
+      "options": [
+        "สร้างตู้ให้ดูสวยที่สุด",
+        "ลูกค้าถอนเงินได้สะดวก ไม่ขึ้นกับเวลาเปิดเคาน์เตอร์",
+        "ทำฐานข้อมูลก่อนเสมอ",
+        "เพิ่มเอกสารออกแบบ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อ่าน so that เพื่อเข้าใจเหตุผลของความต้องการ ไม่ใช่มองเพียง action ถอนเงิน ข้อนี้เป็นตัวอย่างคำตอบจาก benefit ใน story",
+      "terms": [
+        "story",
+        "value"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 5"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-2",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "Story “Cashier อยากเห็นยอดเงินรวมในลิ้นชัก” ยังขาดอะไรที่ควรถามเพิ่ม?",
+      "options": [
+        "ชื่อภาษาโปรแกรม",
+        "เหตุผล / Benefit ว่าต้องการรู้ยอดเพื่ออะไร",
+        "จำนวน developer",
+        "ต้องทำสัญญาใหม่เสมอ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "สไลด์ถาม Why would a cashier want to see the total amount? ต้องคุยเพื่อรู้ประโยชน์ที่แท้จริง ไม่เดาคำตอบธุรกิจแทนผู้ใช้",
+      "terms": [
+        "story",
+        "value"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 7"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-3",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "Story “ลูกค้าต้องการยกเลิกการจอง” ควรถามรายละเอียดใดบ้าง?",
+      "options": [
+        "คืนเต็มจำนวนหรือบางส่วน",
+        "คืนเงินหรือเป็นเครดิต",
+        "ต้องยกเลิกก่อนกี่ชั่วโมง",
+        "แจ้งยืนยันอย่างไร"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "สไลด์ยกทั้งสี่เรื่องเป็นตัวอย่างรายละเอียดที่ควรคุยก่อนพัฒนา เพื่อให้เข้าใจตรงกัน",
+      "terms": [
+        "story",
+        "ac",
+        "refinement"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 8"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-inclass-1",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "inclass",
+      "prompt": "ในตัวอย่างยกเลิกการจอง เหตุใดไม่ควรเลือกทำ Email confirmation ก่อนโดยมองเพียงว่าครอบคลุมสมาชิกมากกว่า?",
+      "options": [
+        "Email ไม่มีคุณค่าเสมอ",
+        "ถ้ายังยกเลิกไม่ได้ การแจ้งยืนยันยังไม่ช่วยให้ผู้ใช้ยกเลิกได้ ต้องดู flow และคุณค่าก่อน",
+        "เพราะ UI สำคัญกว่าเสมอ",
+        "เพราะสมาชิกทั่วไปห้ามได้ฟีเจอร์"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์ชวนดู dependency และประโยชน์จริง ไม่ตัดสินจากจำนวนผู้ใช้ที่ดูเหมือนครอบคลุมเพียงอย่างเดียว",
+      "terms": [
+        "value",
+        "pbi"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 9"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-inclass-2",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "inclass",
+      "prompt": "ใครควรรับผิดชอบการตัดสินใจลำดับ PBI ว่าควรสร้างฟีเจอร์ใดก่อน?",
+      "options": [
+        "Developers ตัดสินฝั่งธุรกิจเอง",
+        "Product Owner โดยรับข้อมูลจาก stakeholders และทีม",
+        "Scrum Master สั่งลำดับทั้งหมด",
+        "ผู้ใช้คนใดคนหนึ่งตัดสินแทนทุกฝ่าย"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "PO accountable ต่อการ maximize value จึงต้องคุยกับ stakeholders ใช้ข้อมูลธุรกิจและข้อจำกัดเทคนิค ไม่ใช่เดาโดยทีมพัฒนา",
+      "terms": [
+        "po",
+        "prioritized"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g13",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s3",
+          "location": "PDF หน้า 9"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-slide-4",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "เหตุใด Product Backlog จึงควรเก็บงานประเภทอื่นนอกจาก Feature เช่น Defect, Technical work และ Knowledge acquisition?",
+      "options": [
+        "เพื่อให้รายการดูยาว",
+        "เพื่อให้เห็นงานที่ต้องทำทั้งหมดร่วมกันและจัดลำดับได้",
+        "เพราะทุกงานต้องเป็น User Story",
+        "เพื่อซ่อนงาน technical จาก PO"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "งานที่จำเป็นต่อผลิตภัณฑ์มีหลายประเภท การรวมไว้ช่วย Transparency การวางแผนและการพิจารณา trade-off",
+      "terms": [
+        "pbi",
+        "transparency"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 13–14"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-5",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "Emergent ต่างจาก Detailed Appropriately อย่างไร?",
+      "options": [
+        "Emergent คือเติมรายละเอียดเดิมเท่านั้น",
+        "Emergent คือเปลี่ยนหรือเพิ่มลดตามข้อมูลใหม่ ส่วน Detailed Appropriately คือระดับรายละเอียดเหมาะกับความใกล้ทำ",
+        "ทั้งสองแปลว่าทุก PBI ละเอียดเท่ากัน",
+        "Emergent แปลว่าห้ามปรับลำดับ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อันหนึ่งเน้นการเปลี่ยนสิ่งที่ต้องทำตามสิ่งที่เรียนรู้ อีกอันเน้นระดับความละเอียดของแต่ละ item",
+      "terms": [
+        "emergent",
+        "detailed"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 16–17"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-6",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "คำถามเปรียบเทียบการเลือกทำข้อสอบกับจัดลำดับ PBI สื่อให้พิจารณาอะไร?",
+      "options": [
+        "ทำตามลำดับเลขเสมอ",
+        "ดู Value เทียบขนาด / effort รวมถึง risk และสิ่งที่จะได้เรียนรู้",
+        "เลือกอันที่คุ้นเคยเท่านั้น",
+        "เลือกอันยากสุดทุกครั้ง"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์ยกคะแนนเทียบเวลาเพื่อชี้ความคุ้มค่า แล้วเพิ่มปัจจัย Risk และ Learn fast ไม่ใช่มอง value อย่างเดียว",
+      "terms": [
+        "prioritized",
+        "value",
+        "risk"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 20"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-7",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "กิจกรรมใดอยู่ใน Backlog Refinement?",
+      "options": [
+        "สร้างหรือเอางานที่ไม่จำเป็นออก",
+        "เพิ่มหรือแก้ estimate ตามข้อมูลใหม่",
+        "แตก story ใหญ่ที่ใกล้ทำ",
+        "ทบทวนลำดับความสำคัญ"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "ทั้งสี่อยู่ในรายการ Refinement ตามสไลด์ ไม่ใช่เพียงการเพิ่มรายละเอียดข้อความ",
+      "terms": [
+        "refinement",
+        "estimate"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 21–22"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-8",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "Should-have ที่ทำไม่ทัน Release 1 ต้องย้ายเข้า Release 2 อัตโนมัติทุกครั้งหรือไม่?",
+      "options": [
+        "ต้องย้ายเสมอโดยไม่ดูข้อมูลใหม่",
+        "ไม่ต้องทำอีกตลอดไป",
+        "ทบทวนคุณค่าและลำดับใหม่ ถ้ายังสำคัญจึงจัดเข้า Release ถัดไป",
+        "เปลี่ยนทุกอันเป็น Must ทันที"
+      ],
+      "answers": [
+        2
+      ],
+      "explanation": "อาจารย์ให้เงื่อนไขว่าหากความต้องการยังเดิมก็ควรหยิบต่อ แต่ feedback ใหม่อาจทำให้เลื่อน ลดระดับ หรือไม่ทำก็ได้",
+      "terms": [
+        "should",
+        "prioritized"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 42"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-4-inclass-1",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "inclass",
+      "prompt": "ถ้า Sprint ยาว 2 สัปดาห์ ในตัวอย่างคนทำงานปกติสัปดาห์ละ 5 วัน จะมีวันทำงานกี่วันก่อนหักกิจกรรมและวันลา?",
+      "options": [
+        "14 วัน",
+        "10 วัน",
+        "8 วันเสมอ",
+        "ขึ้นกับจำนวน PBI เท่านั้น"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "สองสัปดาห์ × ห้าวัน = สิบวันทำงาน แต่ไม่ใช่ทุกชั่วโมงจะเป็น execution ต้องหักกิจกรรมและความพร้อมจริงออก",
+      "terms": [
+        "capacity"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 18"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-inclass-2",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "inclass",
+      "prompt": "Sprint Planning ตอนเปิด Sprint ควรวางแผนของรอบใด?",
+      "options": [
+        "Sprint ปัจจุบันที่กำลังเริ่ม",
+        "Sprint ถัดไปเท่านั้น",
+        "ทุก Sprint ของทั้งโครงการอย่างละเอียด",
+        "รอบที่เพิ่งจบไป"
+      ],
+      "answers": [
+        0
+      ],
+      "explanation": "อาจารย์ทดสอบความเข้าใจ JIT ว่า Planning ของรอบที่กำลังเริ่ม ไม่ใช่ปล่อย Sprint นี้ไม่มีแผนแล้วไปวางแผนรอบหน้า",
+      "terms": [
+        "planning",
+        "jit"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 10"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-slide-1",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "slide",
+      "prompt": "Sprint สองสัปดาห์ 10 วัน วันละ 8 ชั่วโมง จึงตั้ง capacity ต่อคนได้ 80 ชั่วโมงสำหรับพัฒนางานทันที",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "80 เป็นเวลาเชิงปฏิทินก่อนหักกิจกรรม งานอื่น วันลา และข้อจำกัด ไม่ใช่เวลาพัฒนาสุทธิ",
+      "terms": [
+        "capacity",
+        "unplanned"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s4",
+          "location": "PDF หน้า 18"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-4-slide-2",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "slide",
+      "prompt": "Sprint Buffer ที่เหมาะสมควรหาอย่างไร?",
+      "options": [
+        "ใช้ 40% ตายตัวทุกทีมตลอดไป",
+        "ดูข้อมูลและประสบการณ์จากหลาย Sprint แล้วปรับตามความไม่แน่นอนของทีม",
+        "ไม่ต้องมี เพราะต้อง estimate ให้ถูกทุกครั้ง",
+        "ใช้เวลาส่วนที่เหลือแบบสุ่ม"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์ยกเปอร์เซ็นต์เริ่มต้นเป็นตัวอย่าง แต่คำแนะนำคือ established empirically จากข้อมูลจริง ไม่ใช่สูตรตายตัว",
+      "terms": [
+        "buffer",
+        "empirical"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s4",
+          "location": "PDF หน้า 20"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-4-slide-3",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "slide",
+      "prompt": "ถ้ายัง estimate PBI หรือแตกเป็น tasks ไม่ได้เพราะไม่รู้วิธี ควรทำอย่างไร?",
+      "options": [
+        "Commit ไปก่อนค่อยหาทาง",
+        "ทำ Spike เพื่อหาความรู้ก่อนตัดสินใจรับงานพัฒนานั้น",
+        "ให้ PO รับประกันแทน",
+        "ขยาย Sprint ทันที"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Spike ลดความไม่แน่นอน เช่น PoC / prototype / study แล้วนำสิ่งที่เรียนรู้กลับไป estimate และวางแผน",
+      "terms": [
+        "spike",
+        "estimate"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s4",
+          "location": "PDF หน้า 25–26"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-4-slide-4",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "slide",
+      "prompt": "ควรทำ Spike ที่มีความไม่แน่นอนสูงเมื่อใด?",
+      "options": [
+        "รอพร้อม implement PBI ที่ยังไม่มั่นใจใน Sprint เดียวกันเสมอ",
+        "วางเป็น Knowledge acquisition PBI และทำก่อน Sprint ที่ต้องรับงานพัฒนาที่พึ่งพาความรู้นั้น",
+        "ทำหลังส่งมอบเท่านั้น",
+        "ไม่ต้องทำถ้าไม่ได้เงินเพิ่ม"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์แนะนำเตรียมความรู้ล่วงหน้าก่อน commit PBI เป้าหมาย ไม่เหมารวมว่าทุก Spike ต้องใช้ทั้ง Sprint",
+      "terms": [
+        "spike",
+        "knowledge"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s4",
+          "location": "PDF หน้า 26–27"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-4-inclass-3",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "inclass",
+      "prompt": "ทีมทำงานที่เลือกไว้เสร็จก่อนหมด Sprint ควรทำอย่างไรตามคำอธิบายในคาบ?",
+      "options": [
+        "ปิด Sprint ทันทีและเลื่อนตารางทุกอย่าง",
+        "คุยกับ PO เพื่อหยิบงานสำคัญที่ทำเสร็จได้ หรือทำ Spike เตรียมงาน โดยรักษากรอบ Sprint",
+        "หยิบงานใหญ่ที่รู้ว่าไม่เสร็จ",
+        "หยุดสร้างคุณค่าจนจบรอบเสมอ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "รักษา cadence ของ Sprint และใช้เวลาที่มีให้เกิดคุณค่า ไม่เริ่มงานที่ทำไม่เสร็จ และไม่ลดระยะ Sprint เพราะงานเสร็จเร็ว",
+      "terms": [
+        "sprint",
+        "spike",
+        "po"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g14",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s4",
+          "location": "PDF หน้า 24, 33"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-4-slide-5",
+      "lesson": 4,
+      "lessons": [
+        4
+      ],
+      "phase": "slide",
+      "prompt": "ตัวอย่างประกอบรถหลายคัน ถ้าเป้าหมายคือส่งมอบคุณค่าสูงสุด แนวทางใดที่อาจารย์เน้น?",
+      "options": [
+        "ต่างคนต่างทำรถคันของตัวเองจนหมดเวลา",
+        "ช่วยกันทำคันที่เริ่มแล้วให้เสร็จก่อน แล้วจึงเริ่มคันต่อไป",
+        "ทำแต่ล้อของทุกคันให้ครบก่อน",
+        "รอให้ทุกคนเก่งทุกอย่างก่อนเริ่ม"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "คิดแบบ value-delivery-focused ลดงานค้างและ handoff ใช้ Swarming ช่วยให้งานที่เริ่มเสร็จจริง",
+      "terms": [
+        "swarming",
+        "flow",
+        "value-focused"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s4",
+          "location": "PDF หน้า 35–39"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-5-inclass-1",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "inclass",
+      "prompt": "Working Group กับ Working Team มีความหมายเหมือนกัน",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "Working Team เน้นผลงานและ accountability ร่วม ลงมือจริงด้วยกัน ต่างจาก group ที่มักแยกงานและรับผิดชอบรายคน",
+      "terms": [
+        "working-group",
+        "working-team"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 14"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-inclass-2",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "inclass",
+      "prompt": "ระหว่าง Efficiency กับ Effectiveness ควรทำอะไรให้ได้ก่อนตามคำอธิบายอาจารย์?",
+      "options": [
+        "Efficiency: ใช้ทรัพยากรน้อยก่อนแม้ไม่ถึงเป้า",
+        "Effectiveness: ให้บรรลุเป้าก่อน แล้วค่อยเพิ่มประสิทธิภาพ",
+        "ต้องได้ทั้งคู่สมบูรณ์ตั้งแต่เริ่มเท่านั้น",
+        "ไม่มีข้อแตกต่าง"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ทำให้บรรลุเป้าหมายก่อน แล้วลดทรัพยากรที่สิ้นเปลือง ถ้าทำผิดเป้าอย่างรวดเร็วและประหยัดก็ยังไม่เกิดผลที่ต้องการ",
+      "terms": [
+        "effectiveness",
+        "efficiency"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 15–16"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-inclass-3",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "inclass",
+      "prompt": "Scrum Master มีหน้าที่เหมือน Project Manager ทุกอย่าง",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "หน้าที่อาจมีส่วนช่วยทีมคล้ายกัน แต่ไม่มีอำนาจ command-and-control แบบ manager ไม่สั่ง task หรือ hire / fire ทีม",
+      "terms": [
+        "sm",
+        "coaching"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 45–46"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-inclass-4",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "inclass",
+      "prompt": "Product Owner เท่ากับ Project Manager และสั่งทุกคนในทีมได้เหมือนกัน",
+      "options": [
+        "จริง",
+        "เท็จ"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "PO มี accountability เฉพาะด้านคุณค่าและ Backlog ไม่รับหน้าที่บริหารและสั่งงานทุกอย่างแบบ Project Manager",
+      "terms": [
+        "po",
+        "self-managing"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 34–39"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-slide-1",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "slide",
+      "prompt": "Executive Coach ตามแผนภาพ ASK / TELL อยู่ลักษณะใด?",
+      "options": [
+        "ถามน้อย บอกน้อย",
+        "ถามมาก บอกน้อย",
+        "ถามน้อย บอกมาก",
+        "ถามมาก บอกมาก"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ตำแหน่ง B คือ Coach ช่วยถามให้คิดและหาคำตอบเอง A เป็น Supporter, C เป็น Advisor, D เป็น Mentor",
+      "terms": [
+        "coaching"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s5",
+          "location": "PDF หน้า 44"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-5-inclass-5",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "inclass",
+      "prompt": "เมื่อทีมแก้ปัญหาเองได้ Coach ควรทำอย่างไร?",
+      "options": [
+        "แก้แทนให้หมดเพื่อเร็วที่สุด",
+        "ตั้งคำถามและช่วยให้ทีมคิดแนวทางด้วยตนเอง",
+        "สั่งวิธีเดียวโดยไม่ฟังบริบท",
+        "ปล่อยไม่สนใจเพราะห้ามช่วยทุกกรณี"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ช่วยสร้าง self-managing capability ไม่ใช่แก้แทนทุกเรื่อง และไม่ใช่ทอดทิ้ง ถ้าอุปสรรคเกินอำนาจทีม SM จึงช่วยนำออก",
+      "terms": [
+        "coaching",
+        "self-managing"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g15",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s5",
+          "location": "PDF หน้า 41–43, 48–49"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-5-inclass-6",
+      "lesson": 5,
+      "lessons": [
+        5
+      ],
+      "phase": "inclass",
+      "prompt": "ตามคำถามในคาบ Technical Debt สามารถเกิดขึ้นได้หรือไม่?",
+      "options": [
+        "ควรสร้างให้มากเพราะเป็นเป้าหมายของ Scrum",
+        "ห้ามมีได้ทุกกรณีโดยไม่ดูบริบท",
+        "อาจยอมรับโดยรู้ trade-off และมีแผนจัดการ แต่ไม่ควรส่งเสริมให้สะสม",
+        "ไม่ต้องชำระคืนเพราะผู้ใช้ไม่เห็น"
+      ],
+      "answers": [
+        2
+      ],
+      "explanation": "อาจารย์ไม่ส่งเสริมให้สร้างหนี้ แต่ปฏิเสธกฎตายตัวว่าห้ามทุกกรณี ต้องพิจารณาประโยชน์ของ feedback กับต้นทุนในอนาคต โดยไม่ส่งมอบของที่ผิดเกณฑ์คุณภาพที่ตกลง",
+      "terms": [
+        "debt",
+        "refactoring"
+      ],
+      "note": "เนื้อหา Sprint Execution ที่สอนต่อในคาบ 5; อ้างอิงเพิ่มเติม PDF บท 4 หน้า 48–53",
+      "references": [
+        {
+          "source": "s4",
+          "location": "PDF หน้า 48–53"
+        },
+        {
+          "source": "g25",
+          "location": "ช่วงคำถาม Technical Debt ก่อน Scrum Values"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    },
+    {
+      "id": "class-3-slide-9",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "ใครมีส่วนร่วมใน Backlog Grooming / Refinement ตามภาพในสไลด์?",
+      "options": [
+        "PO คนเดียวเท่านั้น",
+        "PO, Developers และ stakeholders ที่เกี่ยวข้อง โดย SM ช่วยสนับสนุนได้",
+        "Scrum Master คนเดียว",
+        "เฉพาะลูกค้าภายนอก"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ภาพแสดง Product Owner, Scrum Master, Development team และ stakeholders ภายในและภายนอก ร่วมให้ข้อมูล สร้างและ refine, estimate และจัดลำดับ",
+      "terms": [
+        "refinement",
+        "po",
+        "stakeholders"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 23"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-3-slide-10",
+      "lesson": 3,
+      "lessons": [
+        3
+      ],
+      "phase": "slide",
+      "prompt": "Backlog Refinement ทำเมื่อใดตามภาพในสไลด์?",
+      "options": [
+        "เฉพาะก่อนเริ่ม project ครั้งเดียว",
+        "ทำช่วงตั้งต้นบางส่วน แล้วต่อเนื่องเมื่อจำเป็น เช่น workshop ระหว่าง Sprint",
+        "ต้องเว้นช่วงระหว่างทุก Sprint จึงทำได้",
+        "ทำได้เฉพาะใน Retrospective"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "ภาพระบุ Some up front then ongoing as necessary และ workshop during sprint รวมถึงโอกาสหลัง Daily / ช่วง Review ไม่ต้องรอช่องว่างระหว่าง Sprint",
+      "terms": [
+        "refinement",
+        "jit"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "s3",
+          "location": "PDF หน้า 24"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามในสไลด์",
+      "answerBasis": "เฉลยเรียบเรียงจากเนื้อหาในสไลด์และคำอธิบายในคาบ"
+    },
+    {
+      "id": "class-1-inclass-8",
+      "lesson": 1,
+      "lessons": [
+        1
+      ],
+      "phase": "inclass",
+      "prompt": "จากภาพเปรียบเทียบที่อาจารย์ถามตอนเริ่มทบทวน แนวทาง Agile ควรพัฒนาเป็นแบบใด?",
+      "options": [
+        "ทำแต่ละ component ให้ครบทุกฟีเจอร์ แล้วค่อยประกอบตอนท้าย",
+        "ทำทีละฟีเจอร์หรือส่วนที่ใช้งานให้คุณค่าได้ แล้ววนเพิ่มและปรับ",
+        "เขียนเอกสารทั้งหมดก่อนจึงเริ่มทดสอบ",
+        "ทำ UI ทั้งระบบก่อนโดยยังไม่มีการทำงานจริง"
+      ],
+      "answers": [
+        1
+      ],
+      "explanation": "อาจารย์อธิบายให้แต่ละรอบมีสิ่งที่ working ใช้ได้ แล้วค่อยเพิ่มความสามารถ ส่วนภาพบนสไลด์ใช้ประกอบ Iterative and Incremental Development",
+      "terms": [
+        "iterative",
+        "incremental",
+        "working-software"
+      ],
+      "note": "",
+      "references": [
+        {
+          "source": "g11",
+          "location": "ช่วงคำถามและคำอธิบายในคาบ"
+        },
+        {
+          "source": "s1",
+          "location": "PDF หน้า 7, 12"
+        }
+      ],
+      "wording": "เรียบเรียงจากคำถามและเฉลยที่ได้ยินใน transcript",
+      "answerBasis": "อิงคำเฉลยของอาจารย์ใน transcript"
+    }
+  ],
+  "quizNotes": [
+    "รวมข้อที่ระบุคำถามหรือประเด็นเฉลยได้จาก PDF 5 บท และ transcript 10 ไฟล์ ข้อซ้ำระหว่าง G1/G2 รวมไว้ พร้อมอ้างอิงแต่ละข้อ",
+    "โจทย์ภาษาไทยและตัวเลือกเรียบเรียงใหม่เพื่อฝึกตอบ ไม่ใช่สำเนา Mentimeter และไม่ใช่ข้อสอบจริง ตัวเลือกเดิมบางข้อไม่ปรากฏในเอกสาร",
+    "คำถามจากสไลด์ที่เป็นปลายเปิด เช่น User Story ของ ATM หรือการถาม benefit อาจมีหลายคำตอบ จึงฝึกจับหลักการตามบริบท แทนการอ้างว่าอาจารย์เฉลยคำตอบตายตัว",
+    "คำถามสำรวจความรู้สึก เช็กชื่อ และคำถามที่คำถอดเสียงไม่พอให้ระบุประเด็นหรือเฉลยอย่างมั่นใจ ไม่รวมเป็นข้อให้คะแนน",
+    "บท 4 เรื่องวันเริ่ม Sprint เก็บถ้อยคำเดิมไม่ครบ จึงระบุชัดว่าเป็นตัวอย่างตารางในคาบ ไม่ใช่กฎว่าทุกทีมต้องเริ่มวันจันทร์",
+    "คาบ 5 มีเนื้อหา Sprint Execution / Technical Debt ที่สอนต่อจากคาบ 4 จึงอาจมีอ้างอิง PDF บท 4 ร่วมด้วย"
   ]
 };

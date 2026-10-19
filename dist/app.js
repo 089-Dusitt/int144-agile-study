@@ -45,8 +45,71 @@
     const s=bySource.get(id);
     return s ? `<span class="source-link">${escapeHTML(s.title)}</span>` : '';
   }
+  const quizBank=window.STUDY.quizzes||[], quizById=new Map(quizBank.map(q=>[q.id,q]));
+  const quizStorage='int144-class-quiz-v1';
+  let quizSaved={};try{quizSaved=JSON.parse(localStorage.getItem(quizStorage)||'{}')||{};}catch{}
+  const quizState={lesson:'all',phase:'all',status:'all',index:0,reviewId:null,order:quizBank.map(q=>q.id),responses:{}};
+  for(const [id,value] of Object.entries(quizSaved.responses||{})){
+    const q=quizById.get(id);
+    if(q&&Array.isArray(value)&&value.length&&value.every(i=>Number.isInteger(i)&&i>=0&&i<q.options.length)&&new Set(value).size===value.length)quizState.responses[id]=value;
+  }
+  const quizEqual=(a,b)=>a.length===b.length&&a.every(x=>b.includes(x));
+  const quizCorrect=q=>quizState.responses[q.id]&&quizEqual(quizState.responses[q.id],q.answers);
+  const quizPhase={end:'Quiz ท้ายคาบ',inclass:'คำถามระหว่างคาบ',slide:'คำถามในสไลด์'};
+  const quizLesson={1:'Agile และ Scrum Concepts',2:'Scrum Overview',3:'Product Backlog และ Release',4:'Scrum Sprints',5:'Values และ Team'};
+  function quizFiltered(){return quizState.order.map(id=>quizById.get(id)).filter(q=>(quizState.lesson==='all'||q.lessons.includes(Number(quizState.lesson)))&&(quizState.phase==='all'||q.phase===quizState.phase||(q.alsoPhases||[]).includes(quizState.phase))&&(quizState.status==='all'||q.id===quizState.reviewId||(quizState.status==='wrong'?quizState.responses[q.id]&&!quizCorrect(q):!quizState.responses[q.id])));}
+  function quizSave(){try{localStorage.setItem(quizStorage,JSON.stringify({responses:quizState.responses}));}catch{}}
+  function quizOptionOrder(q){
+    let seed=[...q.id].reduce((n,c)=>(Math.imul(n,31)+c.charCodeAt(0))>>>0,1729);
+    const order=q.options.map((_,i)=>i);
+    for(let i=order.length-1;i>0;i--){seed=(Math.imul(seed,1664525)+1013904223)>>>0;const j=seed%(i+1);[order[i],order[j]]=[order[j],order[i]];}
+    return order;
+  }
+  function quizHub(){return `<section class="quiz-hub" aria-label="Quiz รวมจากคาบเรียน"><div class="quiz-intro"><span class="eyebrow">RECALL · CHECK · UNDERSTAND</span><p>ฝึกทีละข้อ เลือกคำตอบก่อนดูเหตุผล แล้วกลับมาทวนข้อที่พลาด</p><details class="quiz-origin"><summary>ที่มาและวิธีเรียบเรียงคำถาม</summary><ul>${window.STUDY.quizNotes.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul></details></div><div id="quiz-controls" class="quiz-controls"><label>บทเรียน<select id="quiz-lesson"><option value="all">ครบทั้ง 5 บท</option>${Object.entries(quizLesson).map(([n,t])=>`<option value="${n}">บท ${n} · ${escapeHTML(t)}</option>`).join('')}</select></label><label>ประเภทคำถาม<select id="quiz-phase"><option value="all">ทุกประเภท</option>${Object.entries(quizPhase).map(([k,t])=>`<option value="${k}">${t}</option>`).join('')}</select></label><label>เลือกทวน<select id="quiz-status"><option value="all">ทั้งหมด</option><option value="unanswered">ยังไม่ตอบ</option><option value="wrong">ตอบผิด</option></select></label></div><div id="quiz-workspace"></div></section>`;}
+  function renderQuiz(focus=false){
+    const host=$('#quiz-workspace');if(!host)return;
+    for(const key of ['lesson','phase','status'])$(`#quiz-${key}`).value=quizState[key];
+    const all=quizBank.filter(q=>(quizState.lesson==='all'||q.lessons.includes(Number(quizState.lesson)))&&(quizState.phase==='all'||q.phase===quizState.phase||(q.alsoPhases||[]).includes(quizState.phase)));
+    const answered=all.filter(q=>quizState.responses[q.id]),correct=answered.filter(quizCorrect),wrong=answered.length-correct.length;
+    const questions=quizFiltered();quizState.index=Math.max(0,Math.min(quizState.index,questions.length-1));const q=questions[quizState.index];
+    let content=`<div class="quiz-score" aria-label="ผลการฝึกชุดที่เลือก"><div><strong>${answered.length}<small> / ${all.length}</small></strong><span>ตอบแล้ว</span></div><div><strong>${correct.length}</strong><span>ถูก</span></div><div><strong>${wrong}</strong><span>ผิด</span></div><div><strong>${all.length-answered.length}</strong><span>ยังไม่ตอบ</span></div></div><progress class="quiz-progress" aria-label="ความคืบหน้า Quiz ชุดที่เลือก" max="${Math.max(1,all.length)}" value="${answered.length}"></progress><div class="quiz-tools"><span>${questions.length} ข้อในมุมมองนี้</span><button type="button" data-quiz-action="shuffle" ${questions.length<2?'disabled':''}>⇄ สุ่มลำดับ</button><button type="button" data-quiz-action="reset" ${answered.length?'':'disabled'}>เริ่มชุดที่เลือกใหม่</button></div>`;
+    if(!q){content+=`<div class="quiz-empty" role="status"><h2> ${quizState.status==='wrong'?'ยังไม่มีข้อที่ตอบผิด':quizState.status==='unanswered'?'ตอบครบในชุดนี้แล้ว':'ไม่พบคำถามในชุดที่เลือก'}</h2><p>เปลี่ยนบท ประเภทคำถาม หรือเลือกทวนทั้งหมดเพื่อฝึกต่อ</p><button type="button" data-quiz-action="all">ดูทั้งหมดในชุดนี้</button></div>`;host.innerHTML=content;return;}
+    const response=quizState.responses[q.id],done=!!response,isCorrect=done&&quizCorrect(q),order=quizOptionOrder(q),multiple=q.answers.length>1;
+    content+=`<div class="quiz-step"><span>ข้อ ${quizState.index+1} / ${questions.length}</span><span>บท ${q.lessons.join(' และ ')} · ${quizPhase[q.phase]}</span></div><form id="class-quiz-form" data-question="${q.id}" class="quiz-card"><fieldset><legend id="quiz-question" tabindex="-1">${escapeHTML(q.prompt)}</legend><p class="quiz-choice-hint" id="quiz-choice-hint">${multiple?`เลือกให้ครบ ${q.answers.length} คำตอบ`:'เลือก 1 คำตอบ'} · ตัวเลือกเรียบเรียงเพื่อฝึก</p><div class="quiz-options">${order.map((i,n)=>`<label class="quiz-option${done?(q.answers.includes(i)?' quiz-answer-correct':response.includes(i)?' quiz-answer-wrong':''):''}"><input type="${multiple?'checkbox':'radio'}" name="quiz-answer" value="${i}" aria-describedby="quiz-choice-hint" ${response?.includes(i)?'checked':''} ${done?'disabled':''}><span class="quiz-option-letter" aria-hidden="true">${String.fromCharCode(65+n)}</span><span>${escapeHTML(q.options[i])}${done&&q.answers.includes(i)?'<small class="quiz-answer-tag">✓ คำตอบที่ถูก</small>':done&&response.includes(i)?'<small class="quiz-answer-tag">✕ คำตอบที่เลือก</small>':''}</span></label>`).join('')}</div></fieldset><p id="quiz-validation" class="quiz-validation" role="alert"></p>${done?`<section class="quiz-feedback ${isCorrect?'quiz-feedback-correct':'quiz-feedback-wrong'}" aria-labelledby="quiz-feedback-title"><h3 id="quiz-feedback-title" tabindex="-1">${isCorrect?'✓ ตอบถูก':'✕ ยังไม่ถูก'+(multiple?'ครบทุกตัวเลือก':'')}</h3><p>${escapeHTML(q.explanation)}</p>${q.note?`<p class="quiz-context">${escapeHTML(q.note)}</p>`:''}<p class="quiz-basis">${escapeHTML(q.answerBasis)} · ${escapeHTML(q.wording)}</p><details class="quiz-citations"><summary>ดูแหล่งอ้างอิงของข้อนี้</summary><ul>${q.references.map(r=>`<li>${escapeHTML(bySource.get(r.source)?.title||r.source)} · ${escapeHTML(r.location)}</li>`).join('')}</ul></details>${q.terms.length?`<div class="quiz-terms"><span>ทวนศัพท์ที่เกี่ยวข้อง</span>${q.terms.map(id=>`<button type="button" class="related-word" data-term="${id}">${escapeHTML(byTerm.get(id)?.en||id)}</button>`).join('')}</div>`:''}</section><button type="button" class="quiz-secondary" data-quiz-action="retry">ลองตอบข้อนี้ใหม่</button>`:'<button type="submit" class="quiz-primary">ตรวจคำตอบ</button>'}</form><nav class="quiz-navigation" aria-label="เปลี่ยนข้อ Quiz"><button type="button" data-quiz-action="previous" ${quizState.index===0?'disabled':''}>← ข้อก่อนหน้า</button><button type="button" data-quiz-action="next" ${quizState.index>=questions.length-1?'disabled':''}>ข้อถัดไป →</button></nav><p class="quiz-save-hint">จำผลในเบราว์เซอร์นี้อัตโนมัติ · ตอบหลายตัวเลือกต้องครบและไม่เลือกเกินจึงนับว่าถูก</p>`;
+    host.innerHTML=content;
+    if(focus){const heading=$(done?'#quiz-feedback-title':'#quiz-question');heading?.focus({preventScroll:true});heading?.scrollIntoView({block:'nearest'});}
+  }
+  document.addEventListener('submit',e=>{
+    if(e.target.id!=='class-quiz-form')return;e.preventDefault();
+    const q=quizById.get(e.target.dataset.question);if(!q||quizState.responses[q.id])return;
+    const selected=[...e.target.querySelectorAll('input[name="quiz-answer"]:checked')].map(x=>Number(x.value));
+    if(!selected.length){$('#quiz-validation').textContent='เลือกคำตอบก่อนตรวจนะ';return;}
+    quizState.responses[q.id]=selected;quizState.reviewId=q.id;quizSave();renderQuiz(true);
+    announce(quizCorrect(q)?'ตอบถูก อ่านเหตุผลด้านล่างได้เลย':'ยังไม่ถูก อ่านเหตุผลและคำตอบที่ถูกด้านล่าง');
+  });
+  document.addEventListener('change',e=>{
+    const key={'quiz-lesson':'lesson','quiz-phase':'phase','quiz-status':'status'}[e.target.id];
+    if(key){quizState[key]=e.target.value;quizState.index=0;quizState.reviewId=null;renderQuiz();}
+  });
+  document.addEventListener('click',e=>{
+    const action=e.target.closest('[data-quiz-action]')?.dataset.quizAction;if(!action)return;
+    const questions=quizFiltered(),q=questions[quizState.index];
+    if(action==='next'||action==='previous'){const target=questions[quizState.index+(action==='next'?1:-1)];quizState.reviewId=null;quizState.index=Math.max(0,quizFiltered().findIndex(item=>item.id===target?.id));}
+    else if(action==='all'){quizState.status='all';quizState.index=0;quizState.reviewId=null;}
+    else if(action==='retry'&&q){delete quizState.responses[q.id];quizState.reviewId=q.id;quizSave();}
+    else if(action==='shuffle'){
+      for(let i=quizState.order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[quizState.order[i],quizState.order[j]]=[quizState.order[j],quizState.order[i]];}
+      quizState.index=0;quizState.reviewId=null;
+    }else if(action==='reset'){
+      for(const item of quizBank)if((quizState.lesson==='all'||item.lessons.includes(Number(quizState.lesson)))&&(quizState.phase==='all'||item.phase===quizState.phase||(item.alsoPhases||[]).includes(quizState.phase)))delete quizState.responses[item.id];
+      quizState.index=0;quizState.reviewId=null;quizSave();
+    }
+    renderQuiz(action==='next'||action==='previous'||action==='retry');
+  });
+
   function renderBlock(block,index) {
     switch(block.type) {
+      case 'quiz-hub': return quizHub();
       case 'heading': return `<h2 id="section-${index}">${inline(block.text)}</h2>`;
       case 'paragraph': return `<p>${inline(block.text)}</p>`;
       case 'list': { const tag=block.ordered?'ol':'ul'; return `<${tag}>${block.items.map(x=>`<li>${inline(x)}</li>`).join('')}</${tag}>`; }
@@ -90,6 +153,7 @@
     if(focus) $('#chapter-title').focus({preventScroll:true});
     $('#reader').scrollTop=restore?Math.max(0,Number(state.positions[id])||0):0;
     mounted=true;
+    if(id==='class-quiz')renderQuiz();
   }
   function renderTermList() {
     const query=$('#term-search').value.trim().toLocaleLowerCase();
