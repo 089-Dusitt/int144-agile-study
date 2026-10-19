@@ -1736,6 +1736,66 @@ window.STUDY = {
         "planning-phase"
       ],
       "category": "Scrum Overview"
+    },
+    {
+      "id": "team-commitment",
+      "en": "Team Commitment",
+      "th": "ข้อตกลงร่วมกันของทีมต่อสิ่งที่จะทำ",
+      "definition": "ในบริบท Sprint Planning คือการที่ Developers ร่วมกันตกลงงานและแผนที่เหมาะสมกับเป้าหมาย Sprint โดยพิจารณาเวลา ความสามารถ และข้อจำกัดจริงของทีม",
+      "example": "PO เสนอความต้องการ 10 PBI แต่ทีมประเมินแล้วเลือกงานที่ทำได้จริง พร้อมอธิบายเหตุผลและแผนร่วมกัน",
+      "tip": "แยกจาก Commitment ที่เป็น Scrum Value: คำนี้เน้นข้อตกลงของทีมในบริบทการวางแผน PO และ SM ไม่กำหนดปริมาณงานแทน Developers",
+      "related": [
+        "appropriate",
+        "realistic",
+        "challenge",
+        "capacity",
+        "commitment"
+      ],
+      "category": "Scrum Overview"
+    },
+    {
+      "id": "appropriate",
+      "en": "Appropriate",
+      "th": "เหมาะสมกับเป้าหมายและบริบท",
+      "definition": "ข้อตกลงของทีมควรเลือกงานและระดับความท้าทายที่เหมาะกับ Sprint Goal ความสำคัญของงาน และสถานการณ์ของทีม",
+      "example": "เลือกงานที่ช่วยให้ผู้ใช้ชำระเงินได้ตาม Sprint Goal แทนการรับงานที่ไม่เกี่ยวข้องเพียงเพราะทำง่าย",
+      "tip": "Appropriate ถามว่า “งานที่ตกลงเหมาะสมไหม” ส่วน Realistic ถามว่า “ทำได้จริงไหม”",
+      "related": [
+        "realistic",
+        "team-commitment",
+        "sprint-goal"
+      ],
+      "category": "Scrum Overview"
+    },
+    {
+      "id": "realistic",
+      "en": "Realistic",
+      "th": "เป็นไปได้จริงตามกำลังและเวลาที่มี",
+      "definition": "ข้อตกลงต้องอยู่บนข้อมูลจริง เช่น เวลาทำงาน ทักษะ ภาระงาน ความเสี่ยง และ capacity ของ Developers เพื่อให้แผนมีโอกาสสำเร็จจริง",
+      "example": "Sprint นี้มีสมาชิกลา จึงลดงานที่เลือกตามกำลังที่เหลือ ไม่วางแผนโดยหวังว่าจะทำงานล่วงเวลาตลอด",
+      "tip": "งานอาจเหมาะกับเป้าหมาย แต่ถ้าเกินกำลังหรือเวลาที่มี ก็ยังไม่ Realistic",
+      "related": [
+        "appropriate",
+        "team-commitment",
+        "capacity",
+        "buffer"
+      ],
+      "category": "Scrum Overview"
+    },
+    {
+      "id": "challenge",
+      "en": "Challenge the Team",
+      "th": "ตั้งคำถามท้าทายเพื่อให้ทีมทบทวนเหตุผล",
+      "definition": "ในบริบทนี้ Scrum Master ช่วยถามและตรวจสอบเหตุผลว่าข้อตกลงของทีมเหมาะสมและเป็นไปได้จริงหรือไม่ เพื่อให้ Developers ทบทวนและตัดสินใจบนข้อมูล",
+      "example": "SM ถามว่า “มีคนลาสองวันและมีงานค้างอยู่ ทีมมีเวลาเพียงพอสำหรับงานที่เลือกจริงหรือ”",
+      "tip": "Challenge ไม่ได้หมายถึงสั่งเพิ่มงานหรือกำหนดจำนวนงานแทนทีม Developers ยังเป็นผู้ประเมินและวางแผนงาน",
+      "related": [
+        "team-commitment",
+        "appropriate",
+        "realistic",
+        "sm"
+      ],
+      "category": "Scrum Overview"
     }
   ],
   "chapters": [
@@ -1767,7 +1827,7 @@ window.STUDY = {
               "บทเรียนครบเนื้อหา"
             ],
             [
-              "127",
+              "131",
               "คำศัพท์กดดูได้"
             ],
             [
@@ -2434,7 +2494,11 @@ window.STUDY = {
         "defined-process",
         "empirical",
         "upfront",
-        "jit"
+        "jit",
+        "team-commitment",
+        "appropriate",
+        "realistic",
+        "challenge"
       ],
       "sources": [
         "s2",
@@ -2614,11 +2678,11 @@ window.STUDY = {
         },
         {
           "type": "heading",
-          "text": "Team Commitment"
+          "text": "[[team-commitment|Team Commitment]]"
         },
         {
           "type": "paragraph",
-          "text": "ต้อง **Appropriate และ Realistic** Developers ดูเวลาจริงและความสามารถก่อนตกลง PO และ SM ไม่ได้ตัดสินแทนว่าต้องรับงานเท่าไร แต่ SM ช่วย challenge ความเหมาะสมได้"
+          "text": "[[team-commitment|ข้อตกลงร่วมกันของทีม]] ต้อง [[appropriate|Appropriate]] และ [[realistic|Realistic]]: เลือกงานให้เหมาะกับเป้าหมาย และทำได้จริงตามเวลาและความสามารถของ [[developers|Developers]] ก่อนตกลง [[po|PO]] และ [[sm|SM]] ไม่ได้ตัดสินแทนว่าต้องรับงานเท่าไร แต่ SM ช่วย [[challenge|challenge]] ความเหมาะสมได้"
         },
         {
           "type": "quiz",
@@ -2969,7 +3033,11 @@ window.STUDY = {
         "spike",
         "technical-spike",
         "functional-spike",
-        "poc"
+        "poc",
+        "team-commitment",
+        "appropriate",
+        "realistic",
+        "challenge"
       ],
       "sources": [
         "s4",
@@ -3094,7 +3162,7 @@ window.STUDY = {
         },
         {
           "type": "paragraph",
-          "text": "แตก PBI เป็น [[task|Tasks]] พร้อม estimate เพื่อเห็นงานที่ซ่อนอยู่และวางแผนร่วมกัน สไลด์แนะนำ Tasks ส่วนใหญ่ไม่ใหญ่เกินประมาณหนึ่งวันทำงาน Commitment ต้อง Appropriate และ Realistic"
+          "text": "แตก PBI เป็น [[task|Tasks]] พร้อม estimate เพื่อเห็นงานที่ซ่อนอยู่และวางแผนร่วมกัน สไลด์แนะนำ Tasks ส่วนใหญ่ไม่ใหญ่เกินประมาณหนึ่งวันทำงาน [[team-commitment|Commitment]] ต้อง [[appropriate|Appropriate]] และ [[realistic|Realistic]]"
         },
         {
           "type": "note",
